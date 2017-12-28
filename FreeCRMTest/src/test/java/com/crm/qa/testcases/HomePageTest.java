@@ -93,7 +93,7 @@ public class HomePageTest extends TestBase {
 	}
 	
 	@Test(priority=5, enabled = false)
-	public void clickContacts() throws InterruptedException {
+	public void clickContacts() throws InterruptedException, IOException {
 		Thread.sleep(4000);
 		homePage.clickContacts();
 		
@@ -122,7 +122,7 @@ public class HomePageTest extends TestBase {
 	}
 	
 	@Test(priority=1,enabled = true)
-	public void verifyContactsLink() {
+	public void verifyContactsLink() throws IOException {
 		testUtil.switchToIframe("mainpanel");
 		contactsPage = homePage.clickContacts();
 		String contactsPageTitle = driver.getTitle();
