@@ -13,7 +13,7 @@ public class Junit_twitter {
 	@Before
 	public void initialize() {
 		
-        System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/RocketLauncher/Mac/Drivers/chromedriver2_26");
+        System.setProperty("webdriver.chrome.driver", "/Users/sami/git/EclipseWorkSpace/PNT.Selenium/drivers/chromedriver2_25.exe");
         driver = new ChromeDriver();
         
 	}
