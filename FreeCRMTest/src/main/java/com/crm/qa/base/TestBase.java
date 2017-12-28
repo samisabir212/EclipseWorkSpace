@@ -38,7 +38,7 @@ public class TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("/Users/sami/git/EclipseWorkSpace/FreeCRMTest/src/main/java/com/crm/qa/config/config2.properties");
+			FileInputStream ip = new FileInputStream("/Users/sami/git/EclipseWorkSpace/FreeCRMTest/src/main/java/com/crm/qa/config/configuration.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -54,15 +54,14 @@ public class TestBase {
 	
 	
 	public static void initialization() {
-		//read the properties
-		String browserName = prop.getProperty("browser");
 		
+		String browserName = prop.getProperty("browser");
 		if(browserName.equalsIgnoreCase("chrome")) {
-	        System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/RocketLauncher/Mac/Drivers/chromedriver2_25");
+	        System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/RocketLauncher/Mac/Drivers/chromedriver2_26");
 	        	driver = new ChromeDriver();
 	        	
 		}else if(browserName.equalsIgnoreCase("firefox")){
-	       System.setProperty("webdriver.firefox.driver", "/Users/sami/Desktop/RocketLauncher/Mac/Drivers/geckodriverMAC");
+	       //System.setProperty("webdriver.firefox.driver", "/Users/sami/Desktop/RocketLauncher/Mac/Drivers/geckodriverMAC");
 	       driver = new FirefoxDriver();
 	       
 		}

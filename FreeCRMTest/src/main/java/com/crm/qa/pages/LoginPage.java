@@ -2,7 +2,6 @@ package com.crm.qa.pages;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -85,12 +84,12 @@ public class LoginPage extends TestBase {
 	}
 	
 	//login to crm application
-	public HomePage login(String userName, String passWord) throws InterruptedException, IOException {
+	public HomePage login(String userName, String passWord) throws IOException, InterruptedException{
 		
 		
 		username.sendKeys(userName);
 		password.sendKeys(passWord);
-		//Thread.sleep(7000);
+		Thread.sleep(4000);
 		loginButton.click();
 		System.out.println("login button clicked");
 		

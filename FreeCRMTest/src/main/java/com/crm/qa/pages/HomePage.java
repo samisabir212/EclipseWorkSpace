@@ -2,6 +2,7 @@ package com.crm.qa.pages;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,11 +20,11 @@ public class HomePage extends TestBase {
 	
 	//validate user logged in 
 	@FindBy(xpath="//td[contains(text(),'User: sami sabir-idrissi')]")
-	WebElement userText_topLEFT;
+	WebElement username_Text;
 	
 	
 	//deals button link
-	@FindBy(xpath="//a[contains(text(),'Deals')]")
+	@FindBy(xpath="//ul[@class='mlddm']/li[5]")
 	WebElement dealsLink;
 
 	//contacts button link
@@ -31,14 +32,11 @@ public class HomePage extends TestBase {
 	WebElement contactsLink;
 	
 	//calender button link
-	@FindBy(xpath="//a[contains(text(),'Calender')]")
+	@FindBy(xpath="//td[@class='headertable']//div[@id='navmenu']/ul/li[2]")
 	WebElement calenderLink;
 	//tasks button link
 	@FindBy(xpath="//a[contains(text(),'Tasks')]")
 	WebElement tasksLink;
-	
-	
-	
 	
 	
 	public HomePage() throws IOException {
@@ -61,7 +59,7 @@ public class HomePage extends TestBase {
 	//validate user name that is logged in
 	public boolean validateUserByText() {
 		
-		return userText_topLEFT.isDisplayed();
+		return username_Text.isDisplayed();
 		
 	}
 
@@ -89,5 +87,8 @@ public class HomePage extends TestBase {
 		return new DealsPage();	
 	}
 	
+	
+	
+ }
 
-}
+
