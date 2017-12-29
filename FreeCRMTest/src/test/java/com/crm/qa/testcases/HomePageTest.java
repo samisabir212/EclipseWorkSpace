@@ -48,7 +48,7 @@ public class HomePageTest extends TestBase {
 	
 	
 	@Test(priority=1, enabled = false)
-	public void veridyHomePageTitle() {
+	public void veridyHomePageLogo() {
 		
 		boolean validateLogo = homePage.validate_CRMLOGO();
 		if(validateLogo == true) {
@@ -71,6 +71,7 @@ public class HomePageTest extends TestBase {
 	
 	@Test(priority=3, enabled = false)
 	public void veridyLoggedInUser() {
+		testUtil.switchToIframe("mainpanel");
 		boolean user = homePage.validateUserByText();
 		if(user == true) {
 			System.out.println("user: pass");
@@ -95,6 +96,7 @@ public class HomePageTest extends TestBase {
 	@Test(priority=5, enabled = false)
 	public void clickContacts() throws InterruptedException, IOException {
 		Thread.sleep(4000);
+		testUtil.switchToIframe("mainpanel");
 		homePage.clickContacts();
 		
 		String title = driver.getTitle();
@@ -128,10 +130,9 @@ public class HomePageTest extends TestBase {
 		String contactsPageTitle = driver.getTitle();
 		System.out.println("contacts page title is :: "+ contactsPageTitle);
 
-		
 	}
 	
-	
+
 	
 	
 	
@@ -141,14 +142,7 @@ public class HomePageTest extends TestBase {
 		
 	}
 	
-	
-	public void waitUntilClickable_UsingBy(By locator) {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable((locator)));
-
-
-    }
 
 }
 

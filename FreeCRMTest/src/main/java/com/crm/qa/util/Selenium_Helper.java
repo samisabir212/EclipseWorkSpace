@@ -151,14 +151,19 @@ public class Selenium_Helper {
 
     /***************************Select from dropdown list***************************************/
 
-
-    public void selectFromDropDownList(By locator, String text, int index) {
+    
+    public void selectDropListByIndex(By locator, int index) {
 
         Select DropDownList = new Select(driver.findElement(locator));
-        DropDownList.selectByVisibleText(text);
         DropDownList.selectByIndex(index);
-
     }
+    
+	public void selectOptionByVisibleTextElementOutside(WebElement element, String value) {
+        Select select = new Select(element);
+        select.selectByVisibleText(value);
+    }
+
+ 
 
     public void selectOptionByVisibleText(By locator, String value) {
         WebElement object = driver.findElement(locator);

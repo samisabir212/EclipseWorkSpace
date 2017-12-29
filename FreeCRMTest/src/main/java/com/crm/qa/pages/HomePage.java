@@ -3,14 +3,17 @@ package com.crm.qa.pages;
 import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
+import com.crm.qa.util.TestUtil;
 
-public class HomePage extends TestBase {
+public class HomePage extends TestBase  {
 	
 	
+	TestUtil testUtil = new TestUtil();
 	
 	//campro logo at homepage right side
 	@FindBy(xpath="//td[contains(text(),'CRMPRO')]")
@@ -35,6 +38,11 @@ public class HomePage extends TestBase {
 	//tasks button link
 	@FindBy(xpath="//a[contains(text(),'Tasks')]")
 	WebElement tasksLink;
+	//'new contact' link from contact drop down after mouse hover
+	@FindBy(xpath="//a[contains(text(),'New Contacts')]")
+	WebElement newContactLink;
+	
+	
 	
 	
 	public HomePage() throws IOException {
@@ -66,6 +74,7 @@ public class HomePage extends TestBase {
 	
 
 	public ContactsPage clickContacts() throws IOException {
+		testUtil.switchToIframe("mainpanel");
 		contactsLink.click();
 		return new ContactsPage();
 	}
@@ -84,6 +93,21 @@ public class HomePage extends TestBase {
 		dealsLink.click();
 		return new DealsPage();	
 	}
+	
+	public void clickOnNewContactLink(){
+		Actions action = new Actions(driver);
+		action.moveToElement(newContactLink).build().perform();
+		newContactLink.click();
+		
+	
+
+	
+	}
+
+
+
+
+
 	
 	
 	
