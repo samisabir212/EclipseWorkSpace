@@ -98,7 +98,7 @@ public class HomePage extends TestBase  {
 	public void clickOnNewContactLink() throws InterruptedException{
 		Actions action = new Actions(driver);
 		action.moveToElement(contactsLink).build().perform();
-		testUtil.sleepFor(2);
+		testUtil.sleepFor(3);
 		newContactLink.click();
 		
 	

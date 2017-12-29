@@ -72,6 +72,10 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		//on any exception i want to throw an error
+		//also on error i want to capture the screenshot
+		//**throwable handles exceptions and errors
+		//~~~no need to print a screen shot over and over  
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {

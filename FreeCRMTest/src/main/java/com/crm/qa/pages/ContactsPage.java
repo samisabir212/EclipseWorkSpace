@@ -19,7 +19,7 @@ public class ContactsPage extends TestBase {
 	}
 	
 	//'Contacts' label
-	@FindBy(xpath="//td[contains(text(),'Contacts')]")
+	@FindBy(xpath="//td[contains(text(),'Contactss')]") //fix extra s testing screenshot
 	public WebElement contactsLabel;
 	
 
