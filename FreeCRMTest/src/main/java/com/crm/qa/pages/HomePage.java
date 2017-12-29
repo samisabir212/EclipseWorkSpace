@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -39,7 +40,7 @@ public class HomePage extends TestBase  {
 	@FindBy(xpath="//a[contains(text(),'Tasks')]")
 	WebElement tasksLink;
 	//'new contact' link from contact drop down after mouse hover
-	@FindBy(xpath="//a[contains(text(),'New Contacts')]")
+	@FindBy(xpath=".//*[@id='navmenu']/ul/li[4]/ul/li[1]/a")
 	WebElement newContactLink;
 	
 	
@@ -94,9 +95,10 @@ public class HomePage extends TestBase  {
 		return new DealsPage();	
 	}
 	
-	public void clickOnNewContactLink(){
+	public void clickOnNewContactLink() throws InterruptedException{
 		Actions action = new Actions(driver);
-		action.moveToElement(newContactLink).build().perform();
+		action.moveToElement(contactsLink).build().perform();
+		testUtil.sleepFor(2);
 		newContactLink.click();
 		
 	

@@ -2,7 +2,6 @@ package com.crm.qa.testcases;
 
 import java.io.IOException;
 
-import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -80,8 +79,6 @@ public class ContactsPageTest extends TestBase {
 	public void validateCreateNewContact(String title, String firstName, String lastName, String company) throws InterruptedException{
 		
 		homePage.clickOnNewContactLink();
-		//testUtil.sleepFor(5);
-		//testUtil.switchToIframe("mainpanel");
 		contactsPage.createNewContact(title, firstName, lastName, company);
 	}
 	
