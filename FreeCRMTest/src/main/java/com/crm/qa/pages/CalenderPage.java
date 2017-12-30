@@ -1,5 +1,13 @@
 package com.crm.qa.pages;
 
-public class CalenderPage {
+import java.io.IOException;
+
+import com.crm.qa.base.TestBase;
+
+public class CalenderPage extends TestBase {
+
+	public CalenderPage() throws IOException {
+		super();
+	}
 
 }

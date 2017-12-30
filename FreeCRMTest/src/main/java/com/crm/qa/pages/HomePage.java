@@ -4,10 +4,10 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import com.crm.qa.pages.CalenderPage;
+import com.crm.qa.pages.DealsPage;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.util.TestUtil;
 
@@ -80,17 +80,18 @@ public class HomePage extends TestBase  {
 		return new ContactsPage();
 	}
 
-	public CalenderPage clickCalender() {
+	public CalenderPage clickCalender() throws IOException  {
 		calenderLink.click();
 		return new CalenderPage();
 	}
 
-	public TasksPage clickTasks() {
-		tasksLink.click();
-		return new TasksPage();
-	}
+//	public TasksPage clickTasks() {
+//		tasksLink.click();
+//		return new TasksPage();
+//		
+//	}
 
-	public DealsPage clickDeals() {
+	public DealsPage clickDeals() throws IOException {
 		dealsLink.click();
 		return new DealsPage();	
 	}

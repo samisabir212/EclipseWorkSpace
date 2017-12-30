@@ -84,7 +84,7 @@ public class HomePageTest extends TestBase {
 	
 	
 	@Test(priority=4,enabled=false)
-	public void clickDeals() {
+	public void clickDeals() throws IOException {
 		homePage.clickDeals();
 		String dealsTitle = driver.getTitle();
 		System.out.println("deals title page is "+ dealsTitle);
@@ -105,7 +105,7 @@ public class HomePageTest extends TestBase {
 	}
 	
 	@Test(priority=1,enabled = false)
-	public void clickCalender() {
+	public void clickCalender() throws IOException {
 		//Thread.sleep(4000);
 		testUtil.switchToIframe("mainpanel");
 		homePage.clickCalender();

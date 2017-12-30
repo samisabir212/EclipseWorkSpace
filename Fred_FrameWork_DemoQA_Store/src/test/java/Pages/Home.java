@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import Util.Lib;
 
+
 public class Home extends Lib {
 	
 	
@@ -12,7 +13,8 @@ public class Home extends Lib {
 	public static void myaccount(WebDriver driver) {
 		//WebElement myacc=driver.findElement(By.xpath(".//*[@id='account']/a"));
 		
-		WebElement myacc=findelement(driver, "//*[@id='account']/a");
+		WebElement myacc = findelement(driver, "//*[@id='account']/a");
+	
 		
 		System.out.println("here is text ::::"+myacc.getText());
 	}

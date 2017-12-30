@@ -41,11 +41,10 @@ public class TestBase {
 		}
 			
 		
-		
-		
 	}
 	
 	
+	//initialization method 'this is called in every "BeforeMethod" Method'
 	public static void initialization() throws IOException {
 		
 		log.info("****************************** Starting test cases execution  *****************************************");
