@@ -185,7 +185,7 @@ public class UnitedAirline extends Selenium_Helper{
 
 		if(e.isSelected()==false) {
 			e.click();
-			sleepFor(2);
+			//sleepFor(2);
 			
 			if(e.isSelected()==true) {
 				System.out.println("i have already checked this box");

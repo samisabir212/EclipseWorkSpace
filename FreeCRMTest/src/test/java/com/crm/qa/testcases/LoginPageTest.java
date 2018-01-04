@@ -5,11 +5,14 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
+
+@Listeners(com.qa.ExtentReportListener.ExtentReporterNG.class)
 
 public class LoginPageTest extends TestBase {
 	
@@ -32,14 +35,14 @@ public class LoginPageTest extends TestBase {
 	}
 	
 	
-	@Test(priority=1,enabled=true)
+	@Test(priority=1,enabled=false)
 	public void loginPageTitleTest() {
 		String title = loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "#1 Free CRM for Any Business: Online Customer Relationship Software");
 		
 	}
 	
-	@Test(priority = 2,enabled=true)
+	@Test(priority = 2,enabled=false)
 	public void validate_HomePage_LOGO() {
 		boolean logo = loginPage.validateCRM_LOGO();
 		if(logo==true) {
@@ -52,7 +55,7 @@ public class LoginPageTest extends TestBase {
 		
 	}
 	
-	@Test(priority=3,enabled=true)
+	@Test(priority=1,enabled=true)
 	public void valid_User_login_Test() throws InterruptedException, IOException {
 		
 	homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));

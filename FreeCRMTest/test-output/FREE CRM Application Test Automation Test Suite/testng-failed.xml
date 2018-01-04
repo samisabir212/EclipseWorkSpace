@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-  <test name="Free CRM App Test Cases(failed)">
+  <test name="test(failed)">
     <classes>
       <class name="com.crm.qa.testcases.ContactsPageTest">
         <methods>
@@ -14,5 +14,5 @@
         </methods>
       </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
     </classes>
-  </test> <!-- Free CRM App Test Cases(failed) -->
+  </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [FREE CRM Application Test Automation Test Suite] -->

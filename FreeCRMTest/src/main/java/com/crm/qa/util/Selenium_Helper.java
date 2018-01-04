@@ -592,6 +592,7 @@ public class Selenium_Helper {
     }
 
     //Explicit wait for an element to be present and then utilize it
+    //store this method in a Webelement object
     public WebElement waitForElement(int timeout, By locator) {
 
         WebElement element = null;
