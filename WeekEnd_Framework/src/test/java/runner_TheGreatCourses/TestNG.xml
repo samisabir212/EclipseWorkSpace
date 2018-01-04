@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="The Great Courses suits" thread-count="1" parallel="tests">
+
+	<listeners>
+		<listener class-name="util.ExtentReporterNG" />
+	</listeners> 
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="saucelabs"/>
+    <parameter name="useGrid" value="false"/>
+    <parameter name="platform" value="mac"/>
+    <parameter name="os" value="Mac"/>
+    <parameter name="os_version" value="Sierra"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="54.0"/>
+    <parameter name="url" value="https://www.thegreatcourses.com/"/>
+
+
+
+
+	<test name="Great courses TestBase">
+		<classes>
+			<!-- <class name="com.crm.qa.testcases.LoginPageTest"></class> -->			<!-- <class name="com.crm.qa.testcases.HomePageTest"></class> -->
+			<class name="tests_TheGreatCourses.Test1"></class>
+		</classes>
+	</test>
+	
+	<test name="Great courses Generic Base">
+		<classes>
+			<class name="tests_TheGreatCourses.Testing_Generic_baseClass"></class>
+		</classes>
+	</test>
+	
+
+	
+</suite>

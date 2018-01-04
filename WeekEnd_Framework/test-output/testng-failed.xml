@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [The Great Courses test]">
+  <test name="Great courses test(failed)">
+    <classes>
+      <class name="tests_TheGreatCourses.Test1">
+        <methods>
+          <include name="tearDown"/>
+          <include name="Initialize"/>
+          <include name="test_ProductPurchase_Item_Zero_to_infinity"/>
+        </methods>
+      </class> <!-- tests_TheGreatCourses.Test1 -->
+    </classes>
+  </test> <!-- Great courses test(failed) -->
+</suite> <!-- Failed suite [The Great Courses test] -->
