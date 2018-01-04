@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [lyrics web app suits]" parallel="tests">
+  <parameter name="useCloudEnv" value="false"/>
+  <parameter name="os" value="Mac"/>
+  <parameter name="os_version" value="Sierra"/>
+  <parameter name="browserVersion" value="54.0"/>
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="cloudEnvName" value="saucelabs"/>
+  <parameter name="useGrid" value="false"/>
+  <parameter name="platform" value="mac"/>
+  <parameter name="url" value="https://www.lyrics.com/"/>
+  <listeners>
+    <listener class-name="utilMaster.ExtentReporterNG"/>
+  </listeners>
+  <test name="lyric test case 1.4(failed)" parallel="tests">
+    <classes>
+      <class name="tests.HomePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="cleanUp"/>
+          <include name="testCommonAPIMethods"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+    </classes>
+  </test> <!-- lyric test case 1.4(failed) -->
+</suite> <!-- Failed suite [lyrics web app suits] -->

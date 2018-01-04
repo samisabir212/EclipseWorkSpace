@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="lyrics web app suits" thread-count="1" parallel="tests">
+
+	<listeners>
+		<listener class-name="utilMaster.ExtentReporterNG" />
+	</listeners> 
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="saucelabs"/>
+    <parameter name="useGrid" value="false"/>
+    <parameter name="platform" value="mac"/>
+    <parameter name="os" value="Mac"/>
+    <parameter name="os_version" value="Sierra"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="54.0"/>
+    <parameter name="url" value="https://www.lyrics.com/"/>
+
+
+
+
+	<test name="lyric test case 1.4">
+		<classes>
+			<class name="tests.HomePageTest"></class>
+		</classes>
+	</test>
+	
+
+	
+</suite>
