@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 import generic.Common_API;
 import pages.HomePage;
 
-public class HomePageTest extends Common_API {
+public class HPT extends Common_API {
 	
-	public HomePageTest() throws IOException{
+	public HPT() throws IOException{
 		super();
 		
 	}

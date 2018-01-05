@@ -66,6 +66,7 @@ public class Common_API {
                       @Optional("34") String browserVersion,
                       @Optional("http://www.amazon.com") String url)throws IOException {
 
+		log.info("****************************** Starting test cases execution  *****************************************");
 
 
         if(useCloudEnv==true){

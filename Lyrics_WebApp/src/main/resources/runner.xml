@@ -19,9 +19,9 @@
 
 
 
-	<test name="lyric test case 1.4">
+	<test name="test">
 		<classes>
-			<class name="tests.HomePageTest"></class>
+			<class name="tests.HPT"></class>
 		</classes>
 	</test>
 	
