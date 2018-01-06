@@ -31,8 +31,7 @@ public class TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("/Users/sami/eclipse-workspace/"
-					+ "WeekEnd_Framework/src/main/java/com/qa/config/configuration.properties");
+			FileInputStream ip = new FileInputStream("/Users/sami/git/EclipseWorkSpace/WeekEnd_Framework/src/main/java/com/qa/config/configuration.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

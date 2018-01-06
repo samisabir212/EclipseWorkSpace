@@ -31,6 +31,10 @@ public class HomePage extends Lib_Fred  {
 	}
 	
 	
+	public void clickonloginbutton() {
+		
+		
+	}
 	
 	
 	

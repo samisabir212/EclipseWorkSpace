@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-The_Great_Courses_suits">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-The_Great_Courses_suits" class="show-methods passed suite-The_Great_Courses_suits"> (show)</a> <!-- show-methods passed suite-The_Great_Courses_suits -->
                     </span>
                     <div class="method-list-content passed suite-The_Great_Courses_suits">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-The_Great_Courses_suits" title="tests_TheGreatCourses.Testing_Generic_baseClass" hash-for-method="test">test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-The_Great_Courses_suits" title="tests_TheGreatCourses.Test1" hash-for-method="test_ProductPurchase_Item_Zero_to_infinity">test_ProductPurchase_Item_Zero_to_infinity</a> <!-- method navigator-link -->
@@ -125,21 +120,6 @@
           <div class="suite-The_Great_Courses_suits-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests_TheGreatCourses.Testing_Generic_baseClass</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="test">
-                  </a> <!-- test -->
-                  <span class="method-name">test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-The_Great_Courses_suits-class-passed -->
-          <div class="suite-The_Great_Courses_suits-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">tests_TheGreatCourses.Test1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -155,7 +135,7 @@
         </div> <!-- panel The_Great_Courses_suits -->
         <div panel-name="test-xml-The_Great_Courses_suits" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/sami/eclipse-workspace/WeekEnd_Framework/src/test/java/runner_TheGreatCourses/TestNG.xml</span>
+            <span class="header-content">/Users/sami/git/EclipseWorkSpace/WeekEnd_Framework/src/test/java/runner_TheGreatCourses/TestNG.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -174,16 +154,11 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;util.ExtentReporterNG&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;Great courses TestBase&quot;&gt;
+  &lt;test name=&quot;test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests_TheGreatCourses.Test1&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Great courses TestBase --&gt;
-  &lt;test name=&quot;Great courses Generic Base&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;tests_TheGreatCourses.Testing_Generic_baseClass&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Great courses Generic Base --&gt;
+  &lt;/test&gt; &lt;!-- test --&gt;
 &lt;/suite&gt; &lt;!-- The Great Courses suits --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,10 +170,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Great courses TestBase (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Great courses Generic Base (1 class)</span>
+                <span class="test-name">test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -224,20 +196,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test_ProductPurchase_Item_Zero_to_infinity')
 data.setCell(0, 2, 'tests_TheGreatCourses.Test1')
-data.setCell(0, 3, 22347);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test')
-data.setCell(1, 2, 'tests_TheGreatCourses.Testing_Generic_baseClass')
-data.setCell(1, 3, 12);
+data.setCell(0, 3, 30465);
 window.suiteTableData['The_Great_Courses_suits']= { tableData: data, tableDiv: 'times-div-The_Great_Courses_suits'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 30 seconds</span>
               <div id="times-div-The_Great_Courses_suits">
               </div> <!-- times-div-The_Great_Courses_suits -->
             </div> <!-- times-div -->
@@ -270,26 +238,11 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test_ProductPurchase_Item_Zero_to_infinity</span>
-                <span class="method-start">5141 ms</span>
+                <span class="method-start">9941 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">27489 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests_TheGreatCourses.Testing_Generic_baseClass</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(false, saucelabs, false, mac, Mac, Sierra, chrome, 54.0, https://www.thegreatcourses.com/)</span>
-                <span class="method-start">32620 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">test</span>
-                <span class="method-start">37139 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">37153 ms</span>
+                <span class="method-start">40408 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

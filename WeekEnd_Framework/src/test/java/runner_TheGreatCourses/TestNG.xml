@@ -19,19 +19,17 @@
 
 
 
-	<test name="Great courses TestBase">
-		<classes>
-			<!-- <class name="com.crm.qa.testcases.LoginPageTest"></class> -->			<!-- <class name="com.crm.qa.testcases.HomePageTest"></class> -->
-			<class name="tests_TheGreatCourses.Test1"></class>
-		</classes>
-	</test>
-	
-	<test name="Great courses Generic Base">
-		<classes>
-			<class name="tests_TheGreatCourses.Testing_Generic_baseClass"></class>
-		</classes>
-	</test>
-	
 
+	<test name="reg12123">
+	
+		<classes>
+		
+			<class name="tests_TheGreatCourses.Testing_Generic_baseClass"></class>
+			
+		</classes>
+	
+	
+	
+	</test>
 	
 </suite>

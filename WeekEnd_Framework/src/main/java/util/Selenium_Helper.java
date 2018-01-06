@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -755,7 +754,7 @@ public class Selenium_Helper {
             }
         }
         if (!windowExists) {
-            Assert.fail(windowTitle + " Title window not exists");
+            org.testng.Assert.fail(windowTitle + " Title window not exists");
         }
     }
 
