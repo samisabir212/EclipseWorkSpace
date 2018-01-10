@@ -9,11 +9,11 @@ Scenario Outline: Free CRM Login test scenario
 	Then user clicks on login button 
 	And user is on the home page 
 	Then user moves to the new contact page
-	Then user enters "<firstname>" and "<lastname>" and "<position>"
+	Then user enters contacts details "<firstname>" and "<lastname>" and "<position>"
 	Then user closes the browser 
 	
 
 	Examples:
-		| username               | paassword      | firstname | lastname | position          |
-		| samisabir212@gmail.com | Peoplentech212 | sami      | sabir    | Automation Tester |
-		| fakeusername           | fakepass       | app       | test     | tester            |
+		| username | password | firstname | lastname | position |
+		| samisabir212 | Peoplentech212 | sami | sabir | Selenium Automation tester |
+		| samisabir212 | Peoplentech212 | alfred | pupel | batman butler | 

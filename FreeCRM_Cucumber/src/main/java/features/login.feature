@@ -23,7 +23,7 @@ Scenario Outline: Free CRM Login test scenario
 	Then user closes the browser 
 	
 	Examples: 
-		| username | password |
-		| samisabir212@gmail.com | Peoplentech212 |
-		| hifdsklfjlds | sasas |
+		| username            | password       |
+		| samisabir212        | Peoplentech212 |
+		| hifdsklfjlds        | sasas          |
 		
