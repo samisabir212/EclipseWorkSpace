@@ -246,14 +246,14 @@ public class Common_API {
 
     /*******************************MAXIMIZE WINDOWS FOR DIFFERENT BROWSERS****************************************/
 
-    public void maximize_IEandFirefox_Browsers() {
+    public static void maximize_IEandFirefox_Browsers() {
 
         driver.manage().window().maximize();
 
 
     }
 
-    public void maximize_ToolKit() {
+    public static void maximize_ToolKit() {
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension screenResolution = new Dimension((int)
@@ -271,7 +271,7 @@ public class Common_API {
     /*******************************CLICKING ACTIONS****************************************/
 
     //click by locator
-    public static void click(By locator) {
+    public  static void click(By locator) {
 
         driver.findElement(locator).click();
 
@@ -279,7 +279,7 @@ public class Common_API {
 
     /*******************************JAVA SCRIPT ACTIONS CLASS CLICKING****************************************/
 
-    public void clickJavaScriptActionsClick(By locator) {
+    public static void clickJavaScriptActionsClick(By locator) {
 
         WebElement element = driver.findElement(locator);
         Actions actions = new Actions(driver);
@@ -307,42 +307,42 @@ public class Common_API {
     }
 
 
-    public void typeByCss(String locator, String value) {
+    public static void typeByCss(String locator, String value) {
 
         driver.findElement(By.cssSelector(locator)).sendKeys(value);
     }
 
     //typeing by id locator
-    public void typeByID(String locator, String value) {
+    public static void typeByID(String locator, String value) {
 
         driver.findElement(By.id(locator)).sendKeys(value);
     }
 
     //type by id and enter key
-    public void typeByIdEnter(String locator, String value) {
+    public static void typeByIdEnter(String locator, String value) {
 
         driver.findElement(By.id(locator)).sendKeys(value, Keys.ENTER);
     }
 
 
     //type by xpath and ENTER key
-    public void typeByXpathEnter(String locator, String value) {
+    public static void typeByXpathEnter(String locator, String value) {
 
         driver.findElement(By.xpath(locator)).sendKeys(value, Keys.ENTER);
     }
 
     //type by css and ENTER key
-    public void typeByCssEnter(String locator, String value) {
+    public static void typeByCssEnter(String locator, String value) {
         driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
     }
 
     //type by xpath
-    public void typeByXpath(String locator, String value) {
+    public static void typeByXpath(String locator, String value) {
         driver.findElement(By.xpath(locator)).sendKeys(value);
     }
 
     //?????
-    public void takeEnterKeys(String locator) {
+    public static void takeEnterKeys(String locator) {
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
     }
 
@@ -350,20 +350,20 @@ public class Common_API {
     /***************************Select from dropdown list***************************************/
 
     
-    public void selectDropListByIndex(By locator, int index) {
+    public static void selectDropListByIndex(By locator, int index) {
 
         Select DropDownList = new Select(driver.findElement(locator));
         DropDownList.selectByIndex(index);
     }
     
-	public void selectOptionByVisibleTextElementOutside(WebElement element, String value) {
+	public static void selectOptionByVisibleTextElementOutside(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByVisibleText(value);
     }
 
  
 
-    public void selectOptionByVisibleText(By locator, String value) {
+    public static void selectOptionByVisibleText(By locator, String value) {
         WebElement object = driver.findElement(locator);
         Select select = new Select(object);
         select.selectByVisibleText(value);
@@ -373,7 +373,7 @@ public class Common_API {
     /*****************************CLEAR INPUT FIELD*************************************/
 
 
-    public void clearInputField(By locator) {
+    public static void clearInputField(By locator) {
 
         driver.findElement(locator).clear();
     }
@@ -412,12 +412,12 @@ public class Common_API {
     }
 
     //get Links
-    public void getLinks(String locator){
+    public static void getLinks(String locator){
         driver.findElement(By.linkText(locator)).findElement(By.tagName("a")).getText();
     }
 
 
-    public List<String> getTextFromWebElements(String locator){
+    public static List<String> getTextFromWebElements(String locator){
 
 
         List<WebElement> element = new ArrayList<WebElement>();
@@ -434,7 +434,7 @@ public class Common_API {
 
     //verifying >>>>>>><<<<<<<<<<<<>>>>>>>>>>>><<<<<<<<<<<<<>>>>>>>
 
-    public void verifyRadioButtonSelection(String locator) {
+    public static void verifyRadioButtonSelection(String locator) {
         WebElement roundTripRadioBtn = driver.findElement(By.id(locator));
 
         boolean radioButton = roundTripRadioBtn.isSelected();
@@ -451,7 +451,7 @@ public class Common_API {
 
     }
 
-    public void verifyTextFieldisDisplayed(String locator) {
+    public static void verifyTextFieldisDisplayed(String locator) {
 
         WebElement textField = driver.findElement(By.id(locator));
         boolean textFieldObject = textField.isDisplayed();
@@ -467,7 +467,7 @@ public class Common_API {
     }
 
     //verify a button is present
-    public void verifyButtonIsPresent(String locator, String True, String False) {
+    public static void verifyButtonIsPresent(String locator, String True, String False) {
         WebElement button = driver.findElement(By.xpath(locator));
         boolean verifyButton = button.isDisplayed();
 
@@ -480,7 +480,7 @@ public class Common_API {
         }
     }
 
-    public void verifyURL(String ExpectedURL) {
+    public static void verifyURL(String ExpectedURL) {
 
         String url = driver.getCurrentUrl();
 
@@ -492,7 +492,7 @@ public class Common_API {
 
     }
     
-    public void verifyTitle(String ExpectedTitle) {
+    public static void verifyTitle(String ExpectedTitle) {
     	
     	
     	String title = driver.getTitle();
@@ -506,7 +506,7 @@ public class Common_API {
     }
     
 
-	public void verifyDisplayedElement(boolean element) {
+	public static void verifyDisplayedElement(boolean element) {
 		
 		if(element == true) {
 			System.out.println("element is displayed:: pass");
@@ -517,7 +517,7 @@ public class Common_API {
 		
 	}
 
-    public String getCurrentPageUrl() {
+    public static String getCurrentPageUrl() {
 
         String url = driver.getCurrentUrl();
 
@@ -532,7 +532,7 @@ public class Common_API {
 
 
     /*sleep*/
-    public void sleepFor(int sec) throws InterruptedException {
+    public static void sleepFor(int sec) throws InterruptedException {
         Thread.sleep(sec * 1000);
     }
 
@@ -542,7 +542,7 @@ public class Common_API {
 
 
     //get list of dropdown option1
-    public void getDropDownList(String locator) {
+    public static void getDropDownList(String locator) {
 
         //if this doesnt work, use getAllOptions() method
         List<WebElement> options = driver.findElements(
@@ -559,7 +559,7 @@ public class Common_API {
 
 
     //get list of dropdown option2
-    public List<String> getAllOptions(By by) {
+    public static List<String> getAllOptions(By by) {
         List<String> options = new ArrayList<String>();
         for (WebElement option : new Select(driver.findElement(by)).getOptions()) {
             String txt = option.getText();
@@ -574,7 +574,7 @@ public class Common_API {
 
 
     //get list of elements by xpath
-    public List<WebElement> getListOfWebElementsByXpath(String locator) {
+    public static List<WebElement> getListOfWebElementsByXpath(String locator) {
         List<WebElement> list = new ArrayList<WebElement>();
         list = driver.findElements(By.xpath(locator));
 
@@ -584,7 +584,7 @@ public class Common_API {
 
 
 
-    public List<WebElement> getListOfWebElementsByID(String locator) {
+    public static List<WebElement> getListOfWebElementsByID(String locator) {
         List<WebElement> list = new ArrayList<WebElement>();
         list = driver.findElements(By.id(locator));
 
@@ -593,7 +593,7 @@ public class Common_API {
         return list;
     }
 
-    public List<WebElement> printListOfWebElementsByID(String locator) {
+    public static List<WebElement> printListOfWebElementsByID(String locator) {
 
         WebElement element = driver.findElement(By.id(locator));
         Select sel = new Select(element);
@@ -613,7 +613,7 @@ public class Common_API {
     }
 
 
-    public List<String> getListOfString(List<WebElement> list) {
+    public static List<String> getListOfString(List<WebElement> list) {
 
         List<String> items = new ArrayList<String>();
         for (WebElement element : list) {
@@ -654,7 +654,7 @@ public class Common_API {
 
 
     //handling Alert
-    public boolean isAlertPresent() {
+    public static boolean isAlertPresent() {
 
         try{
             driver.switchTo().alert();
@@ -674,7 +674,7 @@ public class Common_API {
 
 
     //same as alertAccept method
-    public void okAlert(){
+    public static void okAlert(){
         Alert alert = driver.switchTo().alert();
         alert.accept();
     }
@@ -684,7 +684,7 @@ public class Common_API {
     }
 
 
-    public void getAlertText(Alert verifiedText) {
+    public static void getAlertText(Alert verifiedText) {
 
         Alert text = driver.switchTo().alert();
         System.out.println("Text of the alert is : " + text);
@@ -698,7 +698,7 @@ public class Common_API {
 
 
     //iFrame Handle
-    public void switchToIframe(String nameOrID) {
+    public static void switchToIframe(String nameOrID) {
 
         //make sure you get the id or name of the iframe and pass it as element
         //so create a variable and store the webelement object and pass it to the method parameter
@@ -707,7 +707,7 @@ public class Common_API {
     }
 
     //counting iframe handles
-    public void countIframeHandles(String tagNameLocator) {
+    public static void countIframeHandles(String tagNameLocator) {
 
         int iFrameElements = driver.findElements(By.tagName(tagNameLocator)).size();
 
@@ -715,7 +715,7 @@ public class Common_API {
 
     }
 
-    public void goBackToHomeWindow(){
+    public static void goBackToHomeWindow(){
 
 
         driver.switchTo().defaultContent();
@@ -723,14 +723,14 @@ public class Common_API {
 
 
     //Working with Window Handles
-    public void getWindowHandle() {
+    public static void getWindowHandle() {
         //returns parent window handle
         String primeWindow = driver.getWindowHandle();
 
     }
 
     //switching from parent window to child window
-    public void switchParentToChildWindow() {
+    public static void switchParentToChildWindow() {
 
         Set<String> allWindows = driver.getWindowHandles();
 
@@ -746,7 +746,7 @@ public class Common_API {
 
     }
 
-    public void getAllWindowHandles() {
+    public static void getAllWindowHandles() {
 
         Set<String> allWindows = driver.getWindowHandles();
 
@@ -755,14 +755,14 @@ public class Common_API {
     }
 
 
-    public void navigateBack(){
+    public static void navigateBack(){
 
 
         driver.navigate().back();
     }
 
 
-    public void navigateForward(){
+    public static void navigateForward(){
         driver.navigate().forward();
     }
     
@@ -770,7 +770,7 @@ public class Common_API {
 
 
     //wait for element to be clickable by any type
-    public void waitUntilClickable_UsingBy(By locator) {
+    public static void waitUntilClickable_UsingBy(By locator) {
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable((locator)));
@@ -779,7 +779,7 @@ public class Common_API {
     }
 
     //wait for element to be clickable by xpath
-    public void waitUntilClickAble(By locator){
+    public static void waitUntilClickAble(By locator){
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(locator));
@@ -788,7 +788,7 @@ public class Common_API {
 
 
     //wait for page to load completely
-    public void implicitWait(int impWait,int pageLoadT) {
+    public static void implicitWait(int impWait,int pageLoadT) {
 
         driver.manage().timeouts().implicitlyWait(impWait, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(35, TimeUnit.SECONDS);
@@ -800,7 +800,7 @@ public class Common_API {
 
 
     //use this as an example to all other wait types
-    public void waitUntilVisible(By locator){
+    public static void waitUntilVisible(By locator){
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
 
@@ -809,7 +809,7 @@ public class Common_API {
     }
 
     //Explicit wait for an element to be present and then utilize it
-    public WebElement waitForElement(int timeout, By locator) {
+    public static WebElement waitForElement(int timeout, By locator) {
 
         WebElement element = null;
 
@@ -832,7 +832,7 @@ public class Common_API {
 
 
     //wait for element to be selecatable by any locator using By
-    public void waitUntilSelectable(By locator){
+    public static void waitUntilSelectable(By locator){
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
         boolean element = wait.until(ExpectedConditions.elementToBeSelected(locator));
@@ -841,7 +841,7 @@ public class Common_API {
     }
 
 
-    public void mouseHoverByCSS(String locator){
+    public static void mouseHoverByCSS(String locator){
         try {
             WebElement element = driver.findElement(By.cssSelector(locator));
             Actions action = new Actions(driver);
@@ -858,7 +858,7 @@ public class Common_API {
 
 
     //mousehover by
-        public void mouseHover(By locatorAttemp1, By locatorAttempt2) {
+        public static void mouseHover(By locatorAttemp1, By locatorAttempt2) {
 
         try {
             WebElement element = driver.findElement(locatorAttemp1);
@@ -873,7 +873,7 @@ public class Common_API {
 
     }
 
-    public void mouseHoverByXpath(String locator){
+    public static void mouseHoverByXpath(String locator){
         try {
             WebElement element = driver.findElement(By.xpath(locator));
             Actions action = new Actions(driver);
@@ -890,7 +890,7 @@ public class Common_API {
 
 
     //drag and drop using By method
-    public void dragAndDropByAnyLocatorType(By fromLocator, By toLocator) throws InterruptedException {
+    public static void dragAndDropByAnyLocatorType(By fromLocator, By toLocator) throws InterruptedException {
 
 
         WebElement fromElement1 = driver.findElement((fromLocator));
@@ -909,7 +909,7 @@ public class Common_API {
     }
 
     //Drag and drop method option1
-    public void dragAndDrop(String fromLocatorXpath, String toLocatorXpath) throws InterruptedException {
+    public static void dragAndDrop(String fromLocatorXpath, String toLocatorXpath) throws InterruptedException {
 
 
         WebElement fromElement1 = driver.findElement(By.xpath(fromLocatorXpath));
@@ -927,7 +927,7 @@ public class Common_API {
     }
 
     //drag and drop method option2
-    public void dragAndDropMethod(String fromLocatorXpath, String toLocatorXpath) {
+    public static void dragAndDropMethod(String fromLocatorXpath, String toLocatorXpath) {
 
 
         WebElement fromElement1 = driver.findElement(By.xpath(fromLocatorXpath));
@@ -941,7 +941,7 @@ public class Common_API {
     }
 
     //getting  coordinates of window
-    public void getWindowCoordinates() {
+    public static void getWindowCoordinates() {
 
         int xCoordinate = driver.manage().window().getPosition().getX();
         int yCoordinate = driver.manage().window().getPosition().getY();
