@@ -17,6 +17,14 @@
    
 
 	<dependencies>
+	
+		<dependency>
+			<groupId>Master_AutomationFrameWork</groupId>
+			<artifactId>Master</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+	
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

@@ -1,51 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="636.712025">
-<testcase classname="Free CRM Login Feature" name="Free CRM Login test scenario" time="20.974507">
-<system-out><![CDATA[Given user is already on the login page.....................................passed
-When title of login page is Free CRM........................................passed
-Then user enters "samisabir212" and "Peoplentech212"........................passed
-Then user clicks on login button............................................passed
-And user is on the home page................................................passed
-Then user moves to the new contact page.....................................passed
-Then user enters contacts details "sami" and "sabir" and "Selenium Automation tester".passed
-Then user closes the browser................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Free CRM Login Feature" name="Free CRM Login test scenario 2" time="615.737518">
-<failure message="org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 600.000&#10;  (Session info: chrome=55.0.2883.75)&#10;  (Driver info: chromedriver=2.26.436421 (6c1a3ab469ad86fd49c8d97ede4a6b96a49ca5f6),platform=Mac OS X 10.12.6 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'&#10;System info: host: 'Samis-MacBook-Pro.local', ip: 'fe80:0:0:0:1c03:d5df:3b13:11ae%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_131'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.26.436421 (6c1a3ab469ad86fd49c8d97ede4a6b96a49ca5f6), userDataDir=/var/folders/np/61dbzy9x4vz7n8t8yvcn0b0w0000gn/T/.org.chromium.Chromium.5icU8e}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.75, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=MAC, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: c62c42b56cc4f6c9fa776914cd95eb48&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)&#10;&#9;at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)&#10;&#9;at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)&#10;&#9;at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:703)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:374)&#10;&#9;at stepDefinitions.LoginStepDefinition.user_is_on_the_home_page(LoginStepDefinition.java:71)&#10;&#9;at ✽.And user is on the home page(/Users/sami/git/EclipseWorkSpace/FreeCRM_Cucumber/src/main/java/features/contacts.feature:10)&#10;"><![CDATA[Given user is already on the login page.....................................passed
-When title of login page is Free CRM........................................passed
-Then user enters "test" and "test0001"......................................passed
-Then user clicks on login button............................................passed
-And user is on the home page................................................failed
-Then user moves to the new contact page.....................................skipped
-Then user enters contacts details "alfred" and "pupel" and "batman butler"..skipped
-Then user closes the browser................................................skipped
-
-StackTrace:
-org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 600.000
-  (Session info: chrome=55.0.2883.75)
-  (Driver info: chromedriver=2.26.436421 (6c1a3ab469ad86fd49c8d97ede4a6b96a49ca5f6),platform=Mac OS X 10.12.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'Samis-MacBook-Pro.local', ip: 'fe80:0:0:0:1c03:d5df:3b13:11ae%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.26.436421 (6c1a3ab469ad86fd49c8d97ede4a6b96a49ca5f6), userDataDir=/var/folders/np/61dbzy9x4vz7n8t8yvcn0b0w0000gn/T/.org.chromium.Chromium.5icU8e}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.75, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=MAC, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: c62c42b56cc4f6c9fa776914cd95eb48
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:703)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:374)
-	at stepDefinitions.LoginStepDefinition.user_is_on_the_home_page(LoginStepDefinition.java:71)
-	at ✽.And user is on the home page(/Users/sami/git/EclipseWorkSpace/FreeCRM_Cucumber/src/main/java/features/contacts.feature:10)
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0">
+<testcase classname="Deal data creation" name="Free CRM Create a new deal scenario" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given user is already on Login Page.........................................undefined
+When title of login page is Free CRM........................................skipped
+Then user enters username and password......................................undefined
+Then user clicks on login button............................................skipped
+And user is on home page....................................................undefined
+Then user moves to new deal page............................................undefined
+Then user enters deal details...............................................undefined
+Then Close the browser......................................................undefined
 ]]></failure>
 </testcase>
 </testsuite>

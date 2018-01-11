@@ -12,11 +12,11 @@ import org.openqa.selenium.interactions.Actions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import generic.Common_API;
 import junit.framework.Assert;
 
-public class LoginStepDefinition {
+public class LoginStepDefinition extends Common_API {
 
-	WebDriver driver;
 
 	@Given("^user is already on the login page$")
 	public void initialize() {
@@ -35,6 +35,7 @@ public class LoginStepDefinition {
 	@When(value = "^title of login page is Free CRM$")
 	public void LoginPageTitle() {
 
+		//verifyTitle("#1 Free CRM for Any Business: Online Customer Relationship Software");
 		String title = driver.getTitle();
 		Assert.assertEquals(title, "#1 Free CRM for Any Business: Online Customer Relationship Software");
 		System.out.println("title");
@@ -42,16 +43,16 @@ public class LoginStepDefinition {
 	}
 
 	@Then(value = "^user enters \"(.*)\" and \"(.*)\"$")
-	public void user_enters_username_and_password(String username, String password) throws InterruptedException {
+	public static void user_enters_username_and_password(String username, String password) throws InterruptedException {
 
 		// enter username
-		driver.findElement(By.name("username")).sendKeys(username);
+		typeBy(By.name("username"), username);
 		System.out.println("username");
 		// enter password
 		driver.findElement(By.name("password")).sendKeys(password);
 		System.out.println("password");
-		Thread.sleep(7);
-
+		sleepFor(5);
+		
 	}
 
 	@Then(value = "^user clicks on login button$")
