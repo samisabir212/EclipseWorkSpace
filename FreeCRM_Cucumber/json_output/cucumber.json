@@ -12,98 +12,158 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 4473956082,
+              "status": "passed"
             },
-            "line": 5,
+            "comments": [
+              {
+                "line": 4,
+                "value": "#using test data table"
+              }
+            ],
+            "line": 6,
             "name": "user is already on Login Page",
-            "match": {},
+            "match": {
+              "location": "DealStepDefinition.user_is_already_on_Login_Page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 10547922,
+              "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "title of login page is Free CRM",
             "match": {
-              "location": "LoginStepDefinition.LoginPageTitle()"
+              "location": "DealStepDefinition.LoginPageTitle()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 5253259477,
+              "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "user enters username and password",
-            "match": {},
+            "match": {
+              "location": "DealStepDefinition.user_enters_username_and_password(DataTable)"
+            },
             "rows": [
               {
                 "cells": [
-                  "samisabir212",
-                  "peoplentech"
+                  "username",
+                  "password"
                 ],
-                "line": 8
+                "line": 9
+              },
+              {
+                "cells": [
+                  "samisabir212",
+                  "Peoplentech212"
+                ],
+                "line": 10
               }
             ],
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 14666633201,
+              "status": "passed"
             },
-            "line": 9,
+            "line": 12,
             "name": "user clicks on login button",
             "match": {
-              "location": "LoginStepDefinition.user_clicks_on_login_button()"
+              "location": "DealStepDefinition.user_clicks_on_login_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 7495190,
+              "status": "passed"
             },
-            "line": 10,
+            "line": 13,
             "name": "user is on home page",
-            "match": {},
+            "match": {
+              "location": "DealStepDefinition.user_is_on_home_page()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 875635583,
+              "status": "passed"
             },
-            "line": 11,
+            "line": 14,
             "name": "user moves to new deal page",
-            "match": {},
+            "match": {
+              "location": "DealStepDefinition.user_moves_to_new_deal_page()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 20947075204,
+              "status": "passed"
             },
-            "line": 12,
+            "line": 15,
             "name": "user enters deal details",
-            "match": {},
+            "match": {
+              "location": "DealStepDefinition.user_enters_deal_details(DataTable)"
+            },
             "rows": [
               {
                 "cells": [
-                  "test deal",
+                  "title",
+                  "amount",
+                  "probability",
+                  "commission"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "test deal1",
                   "1000",
                   "50",
                   "10"
                 ],
-                "line": 13
+                "line": 17
+              },
+              {
+                "cells": [
+                  "test deal2",
+                  "2000",
+                  "60",
+                  "20"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "test deal3",
+                  "3000",
+                  "70",
+                  "30"
+                ],
+                "line": 19
               }
             ],
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 145481080,
+              "status": "passed"
             },
-            "line": 14,
-            "name": "Close the browser",
-            "match": {},
+            "line": 21,
+            "name": "Close the browsers",
+            "match": {
+              "location": "DealStepDefinition.close_the_browsers()"
+            },
             "keyword": "Then "
           }
         ]
@@ -113,6 +173,6 @@
     "description": "",
     "id": "deal-data-creation",
     "keyword": "Feature",
-    "uri": "/Users/sami/git/EclipseWorkSpace/FreeCRM_Cucumber/src/main/java/features/deals.feature"
+    "uri": "/Users/sami/git/EclipseWorkSpace/FreeCRM_Cucumber/src/main/java/features/dealsMap.feature"
   }
 ]

@@ -20,9 +20,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.Common_API;
 
-public class MasterTestUtil extends Common_API {
+public class ScreenShotWebEventListenerConnection extends Common_API {
 
-	public MasterTestUtil() throws IOException {
+	
+	
+	public ScreenShotWebEventListenerConnection() throws IOException {
 		super();
 	}
 

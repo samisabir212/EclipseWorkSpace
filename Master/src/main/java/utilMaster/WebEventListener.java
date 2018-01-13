@@ -68,7 +68,7 @@ public class WebEventListener extends Common_API implements WebDriverEventListen
 	public void onException(Throwable error, WebDriver driver) {
 		System.out.println("Exception occured: " + error);
 		try {
-			MasterTestUtil.takeScreenshotAtEndOfTest();
+			ScreenShotWebEventListenerConnection.takeScreenshotAtEndOfTest();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
