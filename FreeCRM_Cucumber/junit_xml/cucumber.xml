@@ -1,13 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="46.380084">
-<testcase classname="Deal data creation" name="Free CRM Create a new deal scenario" time="46.380084">
-<system-out><![CDATA[Given user is already on Login Page.........................................passed
-When title of login page is Free CRM........................................passed
-Then user enters username and password......................................passed
-Then user clicks on login button............................................passed
-And user is on home page....................................................passed
-Then user moves to new deal page............................................passed
-Then user enters deal details...............................................passed
-Then Close the browsers.....................................................passed
-]]></system-out>
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="18" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="18" time="0">
+<testcase classname="Free CRM application testing" name="Login with correct username and correct password" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a valid login test............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Login with incorrect username and correct password" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a invalid login test..........................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Create a contact" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a contact test case...........................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Create a deal" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a deal test case..............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Create a tasks" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a tasks test case.............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Create a case" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a case test case..............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Verify left panel links" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given clicking on left panel links..........................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Search a deal" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a search deal test............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Search a contact" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a search contact test.........................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Search a case" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a search case test............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Search a task" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a search task test............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Search a call" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a search call test............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Search an email" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a search email test...........................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Search a docs" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a search docs test............................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Search a forms" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a search forms test...........................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="validate a report" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a report test.................................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="Application Logout" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a logout test.................................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Free CRM application testing" name="browser closed" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given This is a close broswer test..........................................undefined
+]]></failure>
 </testcase>
 </testsuite>
