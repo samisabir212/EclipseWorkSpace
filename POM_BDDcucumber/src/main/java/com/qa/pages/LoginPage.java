@@ -46,7 +46,7 @@ public class LoginPage extends TestBase {
 	WebElement signUp_ButtonLink;
 
 	//~PageFactory~ initialize the page Objects
-	public LoginPage() {
+	public LoginPage() throws IOException {
 		PageFactory.initElements(driver, this);
 			 
 	}
