@@ -1,11 +1,11 @@
 @FunctionalTest
 Feature: Free CRM application testing
 
-@SmokeTest @RegressionTest
+@P1
 Scenario: Login with correct username and correct password
 Given This is a valid login test
 
-@RegressionTest
+@RegressionTest 
 Scenario: Login with incorrect username and correct password
 Given This is a invalid login test
 

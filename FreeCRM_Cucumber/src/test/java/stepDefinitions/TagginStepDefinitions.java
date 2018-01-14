@@ -1,13 +1,14 @@
 package stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 
 public class TagginStepDefinitions {
 
 
+
 @Given("^This is a valid login test$")
 public void this_is_a_valid_login_test()  {
+	System.out.println("login test");
   
 }
 
