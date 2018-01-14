@@ -40,6 +40,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
+
 import utilMaster.WebEventListener;
 
 public class Common_API {
@@ -234,6 +236,11 @@ public class Common_API {
 	 * CLICKING ACTIONS
 	 ****************************************/
 
+	//click Webelement  POM pageFactory ---> **make sure WebElement in POM design is static**
+	public static void click(WebElement element) {
+		element.click();
+	}
+	
 	// click by locator
 	public static void click(By locator) {
 
@@ -244,6 +251,14 @@ public class Common_API {
 	/*******************************
 	 * JAVA SCRIPT ACTIONS CLASS CLICKING
 	 ****************************************/
+	
+	//~POM~ javascript execute click
+	public static void clickJS_ExecuteAction(WebElement element) {
+		
+		JavaScriptExecutor js = (JavaScriptExecutor) driver;
+		((RemoteWebDriver) js).executeScript("arguments[0].click",element);
+		
+	}
 
 	public static void clickJavaScriptActionsClick(By locator) {
 

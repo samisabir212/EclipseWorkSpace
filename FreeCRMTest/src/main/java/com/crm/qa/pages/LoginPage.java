@@ -10,9 +10,6 @@ import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase {
 	
-	
-	
-
 
 	//~~~~~~~~PAGE ELEMENTS~~~~~~~
 	//username 
@@ -55,7 +52,7 @@ public class LoginPage extends TestBase {
 		super();
 		PageFactory.initElements(driver, this);
 	}
-	
+	 
 	
 	
 	//~~~~~~~~~~~~~~~~Page Actions~~~~~~~~~~~~~~~~~~
@@ -64,18 +61,7 @@ public class LoginPage extends TestBase {
 		return driver.getTitle();
 	}
 	
-	//validate features link
 	
-	//validate signup link
-	
-	//validate pricing link
-	//validate customers link
-	
-	//validate contact link
-	
-	//validate forgot password text
-	
-	//validate sign up button link
 
 	
 	//validate Crm Logo image is present
