@@ -6,7 +6,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class Hooks {
+public class HooksStepDefinitions {
 
 	@Before
 	public void setUP() {
@@ -19,6 +19,7 @@ public class Hooks {
 		System.out.println("close the browser");
 	}
 
+	
 	@Given("^user is on deal page$")
 	public void user_is_on_deal_oage() throws Throwable {
 		System.out.println("user is on deal page");
@@ -39,7 +40,6 @@ public class Hooks {
 		System.out.println("user is on contact page");
 	}
 
-	}
 
 	@When("^user fills the contact form$")
 	public void user_fills_the_contact_form() throws Throwable {
