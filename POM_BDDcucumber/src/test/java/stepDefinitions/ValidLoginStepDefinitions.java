@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import java.io.IOException;
 
+import com.qa.pages.HomePage;
 import com.qa.pages.LoginPage;
 import com.qa.testBase.TestBase;
 

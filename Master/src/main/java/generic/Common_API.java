@@ -65,9 +65,8 @@ public class Common_API {
 			@Optional("Sierra") String os_version, @Optional("chrome") String browserName,
 			@Optional("55") String browserVersion, @Optional("http://www.lyrics.com") String url) throws IOException {
 
-		log.info(
-				"****************************** Starting test cases execution  *****************************************");
-
+		log.info("****************************** Starting test cases execution  *****************************************");
+		log.debug("lauching test");
 		if (useCloudEnv == true) {
 			if (cloudEnvName.equalsIgnoreCase("browserstack")) {
 				getCloudDriver(cloudEnvName, browserstack_username, browserstack_accesskey, os, os_version, browserName,
