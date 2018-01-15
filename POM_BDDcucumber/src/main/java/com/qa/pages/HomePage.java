@@ -98,9 +98,6 @@ public class HomePage extends TestBase{
 		testUtil.sleepFor(3);
 		newContactLink.click();
 		
-	
-
-	
 	}
 	
 }
