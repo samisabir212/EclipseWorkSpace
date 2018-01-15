@@ -14,8 +14,8 @@ import cucumber.api.junit.Cucumber;
 		plugin= {"pretty","html:test-output/cucumber.html", "json:json_output/cucumber.json", "junit:junit_xml/cucumber.xml"}, //"plugin" is the replacement for "format" for "pretty" output
 		monochrome= true,
 		strict= true,
-		dryRun=false,
-		tags = {"@P1"}
+		dryRun=false
+		//tags = {"@P1"}
 		
 				)
 

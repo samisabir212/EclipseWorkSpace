@@ -26,8 +26,8 @@ public class TestUtil extends TestBase {
 	public TestUtil() throws IOException {
 		super();
 	}
-	public static long PAGE_LOAD_TIMEOUT = 10;
-	public static long IMPLICIT_WAIT = 20;
+	public static long PAGE_LOAD_TIMEOUT = 20;
+	public static long IMPLICIT_WAIT = 30;
 	
 	public static String TESTDATA_SHEET_PATH ="/Users/sami/git/EclipseWorkSpace/FreeCRMTest"
 			+ "/src/main/java/com/crm/qa/testdata/freeCRMtestData.xlsx";

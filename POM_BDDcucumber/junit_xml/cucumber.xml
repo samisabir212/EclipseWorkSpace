@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="17.789575">
+<testcase classname="free crm application test" name="validate valid login to home page test" time="7.669837">
+<failure message="java.lang.NullPointerException&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#10;&#9;at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)&#10;&#9;at com.qa.pages.LoginPage.login(LoginPage.java:68)&#10;&#9;at stepDefinitions.ValidLoginStepDefinitions.user_enters_username_and_password(ValidLoginStepDefinitions.java:41)&#10;&#9;at ✽.And user enters &quot;samisabir212&quot; and &quot;Peoplentech212&quot;(/Users/sami/git/EclipseWorkSpace/POM_BDDcucumber/src/test/java/features/ValidLoginFeature.feature:7)&#10;"><![CDATA[Given user opens browser and navigates to FreeCrm web page..................passed
+Then user is on the login page..............................................passed
+And user enters "samisabir212" and "Peoplentech212".........................failed
+Then clicks login button....................................................skipped
+Then homepage is displayed..................................................skipped
+Then validate home page.....................................................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.qa.pages.LoginPage.login(LoginPage.java:68)
+	at stepDefinitions.ValidLoginStepDefinitions.user_enters_username_and_password(ValidLoginStepDefinitions.java:41)
+	at ✽.And user enters "samisabir212" and "Peoplentech212"(/Users/sami/git/EclipseWorkSpace/POM_BDDcucumber/src/test/java/features/ValidLoginFeature.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="free crm application test" name="validate valid login to home page test 2" time="10.119738">
+<failure message="org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: 'Samis-MacBook-Pro.local', ip: 'fe80:0:0:0:86a:a817:a5b0:2a85%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_131'&#10;Driver info: driver.version: RemoteWebDriver&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:448)&#10;&#9;at org.openqa.selenium.By$ByName.findElement(By.java:303)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#10;&#9;at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)&#10;&#9;at com.qa.pages.LoginPage.login(LoginPage.java:68)&#10;&#9;at stepDefinitions.ValidLoginStepDefinitions.user_enters_username_and_password(ValidLoginStepDefinitions.java:41)&#10;&#9;at ✽.And user enters &quot;hifdsklfjlds&quot; and &quot;sasas&quot;(/Users/sami/git/EclipseWorkSpace/POM_BDDcucumber/src/test/java/features/ValidLoginFeature.feature:7)&#10;"><![CDATA[Given user opens browser and navigates to FreeCrm web page..................passed
+Then user is on the login page..............................................passed
+And user enters "hifdsklfjlds" and "sasas"..................................failed
+Then clicks login button....................................................skipped
+Then homepage is displayed..................................................skipped
+Then validate home page.....................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: 'Samis-MacBook-Pro.local', ip: 'fe80:0:0:0:86a:a817:a5b0:2a85%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:448)
+	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.qa.pages.LoginPage.login(LoginPage.java:68)
+	at stepDefinitions.ValidLoginStepDefinitions.user_enters_username_and_password(ValidLoginStepDefinitions.java:41)
+	at ✽.And user enters "hifdsklfjlds" and "sasas"(/Users/sami/git/EclipseWorkSpace/POM_BDDcucumber/src/test/java/features/ValidLoginFeature.feature:7)
+]]></failure>
+</testcase>
+</testsuite>

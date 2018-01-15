@@ -6,15 +6,11 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.qa.util.TestUtil;
-
-import utilMaster.WebEventListener;
 
 
 public class TestBase {
@@ -22,10 +18,7 @@ public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
-	public static EventFiringWebDriver e_driver;
-	public static WebEventListener eventListener;
-	public static Logger log = Logger.getLogger(TestBase.class);
-
+	
 	
 	
 	
@@ -49,8 +42,6 @@ public class TestBase {
 	//initialization method 'this is called in every "BeforeMethod" Method'
 	public static void initialization() throws IOException {
 		
-		log.info("****************************** Starting test cases execution  *****************************************");
-
 		
 		String browserName = prop.getProperty("browser");
 		if(browserName.equalsIgnoreCase("chrome")) {
@@ -62,18 +53,14 @@ public class TestBase {
 	       driver = new FirefoxDriver();
 	       
 		}
-		
-		e_driver = new EventFiringWebDriver(driver);
-		eventListener= new WebEventListener();
-		e_driver.register(eventListener);
-		driver = e_driver;
+	
 		
 		 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT	, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("appURL"));
 
 	}
 	
