@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0">
+<testcase classname="After a user creates an account the user should be able to login from the" name="" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given user is on the url homepage...........................................undefined
+Then user clicks login button located on the navigation bar on the right side.undefined
+Then user enters username and password......................................undefined
+Then user clicks login button...............................................undefined
+Then user should be logged in with username located on the right side of the navigation bar.undefined
+]]></failure>
+</testcase>
+</testsuite>

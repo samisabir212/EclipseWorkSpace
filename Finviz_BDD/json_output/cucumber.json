@@ -1,0 +1,85 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "id": "after-a-user-creates-an-account-the-user-should-be-able-to-login-from-the;",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "comments": [
+              {
+                "line": 6,
+                "value": "#\tBackgrounds:"
+              },
+              {
+                "line": 7,
+                "value": "#\t\topen browser"
+              },
+              {
+                "line": 8,
+                "value": "#\t\tnavigate to url"
+              },
+              {
+                "line": 9,
+                "value": "#\t\tclose"
+              }
+            ],
+            "line": 12,
+            "name": "user is on the url homepage",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "user clicks login button located on the navigation bar on the right side",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "user enters username and password",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "user clicks login button",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "user should be logged in with username located on the right side of the navigation bar",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "After a user creates an account the user should be able to login from the",
+    "description": "homepage",
+    "id": "after-a-user-creates-an-account-the-user-should-be-able-to-login-from-the",
+    "keyword": "Feature",
+    "uri": "/Users/sami/git/EclipseWorkSpace/Finviz_BDD/src/main/java/Login.feature"
+  }
+]
