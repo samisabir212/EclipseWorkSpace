@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -29,6 +31,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -52,16 +55,6 @@ public class Junit_Common_API {
 	private String saucelabs_accesskey = "";
 	private String browserstack_accesskey = "";
 
-	// public boolean useCloudEnv = (Boolean) prop.get("useCloudEnv");
-	// public String cloudEnvName = prop.getProperty("cloudEnvName");
-	// public boolean useGrid = (Boolean) prop.get("useGrid");
-	// public String platform = prop.getProperty("platform");
-	// public String os = prop.getProperty("os");
-	// public String os_version = prop.getProperty("os_version");
-	// public String browserName = prop.getProperty("browserName");
-	// public String browserVersion = prop.getProperty("browserVersion");
-	// public String url = prop.getProperty("url");
-
 	@Before
 	public void setUp() throws IOException {
 
@@ -69,36 +62,69 @@ public class Junit_Common_API {
 				"****************************** Starting test cases execution  *****************************************");
 		log.debug("lauching test");
 
-		
-		
-		
-		localEnv();
+		String useCloudEnv = getConfig_PropertiesFile().getProperty("useCloudEnv");
+		String cloudEnvName = getConfig_PropertiesFile().getProperty("cloudEnvName");
+		String useGrid = getConfig_PropertiesFile().getProperty("true");
+		if (useCloudEnv.equalsIgnoreCase("true")) {
+			if (cloudEnvName.equalsIgnoreCase("browserstack")){
+				cloudEnv();
+			}else if (cloudEnvName.equalsIgnoreCase("saucelabs")) {
+				cloudEnv();
+			}
+			
+		}else if(useGrid.equalsIgnoreCase("true")){
+			gridEnv();
+		}else {
+			localEnv();
+		}
 
+		// localEnv();
+
+		e_driver = new EventFiringWebDriver(driver);
+		eventListener = new WebEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;
+
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(35, TimeUnit.SECONDS);
+		driver.get(prop.getProperty("url"));
+
+	}
+
+	public WebDriver cloudEnv() throws MalformedURLException {
+		
+		String browserName = getConfig_PropertiesFile().getProperty("browserName");
+		String browserVersion = getConfig_PropertiesFile().getProperty("browserVersion");
+		String os = getConfig_PropertiesFile().getProperty("os");
+		String os_version = getConfig_PropertiesFile().getProperty("os_version");
+		String cloudEnvName = getConfig_PropertiesFile().getProperty("cloudEnvName");
+
+
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability("browser", browserName);
+		cap.setCapability("browser_version", browserVersion);
+		cap.setCapability("os", os);
+		cap.setCapability("os_version", os_version);
+		if (cloudEnvName.equalsIgnoreCase("Saucelabs")) {
+			driver = new RemoteWebDriver(
+					new URL("http://" + saucelabs_username + ":" + saucelabs_accesskey + "@ondemand.saucelabs.com:80/wd/hub"), cap);
+		} else if (cloudEnvName.equalsIgnoreCase("Browserstack")) {
+			cap.setCapability("resolution", "1024x768");
+			driver = new RemoteWebDriver(
+					new URL("http://" + browserstack_username + ":" + browserstack_accesskey + "@hub-cloud.browserstack.com/wd/hub"), cap);
+		}
+		return driver;
 		
 
 	}
 
-	public void localEnv() throws IOException {
+	public WebDriver localEnv() throws IOException {
 
-		File file = new File("/Users/sami/git/EclipseWorkSpace/Master/src/main/java/properties/config.properties");
 
-		FileInputStream fileInput = null;
-		try {
-			fileInput = new FileInputStream(file);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		Properties prop = new Properties();
-
-		// load properties file
-		try {
-			prop.load(fileInput);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		String browserName = prop.getProperty("browserName");
-		String os = prop.getProperty("os");
+		String browserName = getConfig_PropertiesFile().getProperty("browserName");
+		String os = getConfig_PropertiesFile().getProperty("os");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			if (os.equalsIgnoreCase("Mac")) {
@@ -122,21 +148,52 @@ public class Junit_Common_API {
 			System.setProperty("webdriver.ie.driver", "../Generic/driver/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
-		
-		e_driver = new EventFiringWebDriver(driver);
-		eventListener = new WebEventListener();
-		e_driver.register(eventListener);
-		driver = e_driver;
 
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(35, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("url"));
+		return driver;
+
 	}
 
-	@After
-	public void tearDown() {
+	public WebDriver gridEnv() throws MalformedURLException {
+		
+		// passing node url to remote driver
+		String nodeURL = getConfig_PropertiesFile().getProperty("nodeCloudURL");
+
+		// WebDriver driver = null;
+
+		DesiredCapabilities caps = new DesiredCapabilities();
+
+		// Platforms
+		String platform = getConfig_PropertiesFile().getProperty("platform");
+		if (platform.equalsIgnoreCase("Windows")) {
+			caps.setPlatform(org.openqa.selenium.Platform.WINDOWS);
+		}
+		if (platform.equalsIgnoreCase("MAC")) {
+			caps.setPlatform(org.openqa.selenium.Platform.MAC);
+		} 
+		if (platform.equalsIgnoreCase("Linux")) {
+			caps.setPlatform(org.openqa.selenium.Platform.LINUX);
+		}
+
+		// Browsers
+		String browserName = getConfig_PropertiesFile().getProperty("browserName");
+		if (browserName.equalsIgnoreCase("chrome")) {
+			caps = DesiredCapabilities.chrome();
+		}
+		if (browserName.equalsIgnoreCase("firefox")) {
+			caps = DesiredCapabilities.firefox();
+		}
+		// Version
+		String browserVersion = getConfig_PropertiesFile().getProperty("browserVersion");
+		caps.setVersion(browserVersion);
+
+		driver = new RemoteWebDriver(new URL(nodeURL), caps);
+		
+		return driver;
+
+	}
+
+
+	@After public void tearDown() {
 		System.out.println("quit");
 		driver.quit();
 	}
@@ -144,6 +201,32 @@ public class Junit_Common_API {
 	/*******************************
 	 * ACTION METHODS
 	 ****************************************/
+
+	/*
+	 * ~~PROPERTIES FILE
+	 * 
+	 */
+	public Properties getConfig_PropertiesFile() {
+
+		File file = new File("/Users/sami/git/EclipseWorkSpace/Master/src/main/java/properties/config.properties");
+
+		FileInputStream fileInput = null;
+		try {
+			fileInput = new FileInputStream(file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		Properties prop = new Properties();
+
+		// load properties file
+		try {
+			prop.load(fileInput);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return prop;
+
+	}
 
 	/*******************************
 	 * MAXIMIZE WINDOWS FOR DIFFERENT BROWSERS

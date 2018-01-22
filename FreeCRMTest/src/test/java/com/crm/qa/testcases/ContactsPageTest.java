@@ -53,7 +53,7 @@ public class ContactsPageTest extends TestBase {
 		
 	}
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifyContactsPageLabel_isDisplayed() {
 		
 		boolean label = contactsPage.verifyContactsPageLabel();		
@@ -80,7 +80,7 @@ public class ContactsPageTest extends TestBase {
 	}
 	
 	
-	@Test(enabled = false, dataProvider="getCRMTestData")
+	@Test(enabled = true, dataProvider="getCRMTestData")
 	public void validateCreateNewContact(String title, String firstName, String lastName, String company) throws InterruptedException{
 		
 		homePage.clickOnNewContactLink();
