@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1307" started-at="2018-01-22T20:29:23Z" finished-at="2018-01-22T20:29:25Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1307" started-at="2018-01-22T20:29:23Z" finished-at="2018-01-22T20:29:25Z">
+      <class name="basics.GetRequestDemo">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:basics.GetRequestDemo@6325a3ee]" name="setUp" is-config="true" duration-ms="349" started-at="2018-01-22T15:29:23Z" finished-at="2018-01-22T15:29:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getRequestBody()[pri:0, instance:basics.GetRequestDemo@6325a3ee]" name="getRequestBody" duration-ms="945" started-at="2018-01-22T15:29:24Z" finished-at="2018-01-22T15:29:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getRequestBody -->
+      </class> <!-- basics.GetRequestDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

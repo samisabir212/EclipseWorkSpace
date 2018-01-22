@@ -2,10 +2,12 @@ package basics;
 
 import static io.restassured.RestAssured.given;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
 
 public class GetRequestDemo {
 
@@ -27,7 +29,7 @@ public class GetRequestDemo {
 	}
 	
 	
-	@Test
+	@Test(enabled = false)
 	public void statusCode_Verification() {
 		given()
 			  .param("units" , "imperial")
@@ -41,6 +43,28 @@ public class GetRequestDemo {
 			  
 			
 
+	}
+	
+	
+	@Test
+	public void getRequestBody() {
+		
+		Response res = 
+		given()
+		  .param("units" , "imperial")
+		  .param("origins", "Washington,DC")
+		  .param("destinations", "New+York+City,NY")
+		  .param("key", "AIzaSyDnUnuzQVgn9XsF6vFs09mKfiLO3zDVg8A")
+	.when()
+	 	  .get("/distancematrix/json");
+	 	  //change status code to fail it
+		
+		//Assert.assertEquals(200, 200);
+		//System.out.println("Status code :: "+ res.getStatusCode());
+		System.out.println("ResonseBody is :: "+res.body().asString());
+		  
+		
+		
 	}
 
 }
