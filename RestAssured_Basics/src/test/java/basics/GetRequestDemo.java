@@ -2,10 +2,12 @@ package basics;
 
 import static io.restassured.RestAssured.given;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import generic.Common_API;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
@@ -17,6 +19,8 @@ public class GetRequestDemo {
 	 * Then this should be the output
 	 * 
 	 */
+	
+
 	
 	
 	@BeforeClass
@@ -40,7 +44,7 @@ public class GetRequestDemo {
 		 	  .get("/distancematrix/json")
 		.then()
 			  .statusCode(200); //change status code to fail it
-			  
+
 			
 
 	}

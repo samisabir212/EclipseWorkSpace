@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="basics.GetRequestDemo">
+      <class name="basics.ValidateResponseBody">
         <methods>
-          <include name="getRequestBody"/>
           <include name="setUp"/>
+          <include name="validateTextInDistanceMatrix"/>
         </methods>
-      </class> <!-- basics.GetRequestDemo -->
+      </class> <!-- basics.ValidateResponseBody -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

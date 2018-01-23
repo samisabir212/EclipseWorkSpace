@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1307" started-at="2018-01-22T20:29:23Z" finished-at="2018-01-22T20:29:25Z">
+  <suite name="Default suite" duration-ms="2848" started-at="2018-01-23T05:25:35Z" finished-at="2018-01-23T05:25:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1307" started-at="2018-01-22T20:29:23Z" finished-at="2018-01-22T20:29:25Z">
-      <class name="basics.GetRequestDemo">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:basics.GetRequestDemo@6325a3ee]" name="setUp" is-config="true" duration-ms="349" started-at="2018-01-22T15:29:23Z" finished-at="2018-01-22T15:29:24Z">
+    <test name="Default test" duration-ms="2848" started-at="2018-01-23T05:25:35Z" finished-at="2018-01-23T05:25:38Z">
+      <class name="basics.ValidateResponseBody">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:basics.ValidateResponseBody@6325a3ee]" name="setUp" is-config="true" duration-ms="364" started-at="2018-01-23T00:25:35Z" finished-at="2018-01-23T00:25:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getRequestBody()[pri:0, instance:basics.GetRequestDemo@6325a3ee]" name="getRequestBody" duration-ms="945" started-at="2018-01-22T15:29:24Z" finished-at="2018-01-22T15:29:25Z">
+        <test-method status="PASS" signature="validateTextInDistanceMatrix()[pri:0, instance:basics.ValidateResponseBody@6325a3ee]" name="validateTextInDistanceMatrix" duration-ms="2470" started-at="2018-01-23T00:25:36Z" finished-at="2018-01-23T00:25:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getRequestBody -->
-      </class> <!-- basics.GetRequestDemo -->
+        </test-method> <!-- validateTextInDistanceMatrix -->
+      </class> <!-- basics.ValidateResponseBody -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
