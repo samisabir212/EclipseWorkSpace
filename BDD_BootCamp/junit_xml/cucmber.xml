@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="8.611875">
-<testcase classname="What can i afford Calc" name="user should be able to calculate the ideal range for buying a car" time="8.611875">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="14.032888">
+<testcase classname="What can i afford Calc" name="user should be able to calculate the ideal range for buying a car" time="14.032888">
 <system-out><![CDATA[Given user navigates to the Edmunds Calculator webapp page..................passed
 Then user enters "350" in the what can i afford field.......................passed
 Then user clicks the Go button..............................................passed

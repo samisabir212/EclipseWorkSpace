@@ -77,7 +77,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5427036126,
+  "duration": 6375783512,
   "status": "passed"
 });
 formatter.scenario({
@@ -136,7 +136,7 @@ formatter.match({
   "location": "What_Can_I_Afford_Feature.userNavigatesToCalcApp()"
 });
 formatter.result({
-  "duration": 120711901,
+  "duration": 153415194,
   "status": "passed"
 });
 formatter.match({
@@ -149,21 +149,21 @@ formatter.match({
   "location": "What_Can_I_Afford_Feature.userEntersMonthlyPayment(String)"
 });
 formatter.result({
-  "duration": 102637020,
+  "duration": 138606500,
   "status": "passed"
 });
 formatter.match({
   "location": "What_Can_I_Afford_Feature.userClicksGo()"
 });
 formatter.result({
-  "duration": 90154501,
+  "duration": 842413748,
   "status": "passed"
 });
 formatter.match({
   "location": "What_Can_I_Afford_Feature.user_is_navigated_to_the_calculators_affordability()"
 });
 formatter.result({
-  "duration": 900960106,
+  "duration": 101443038,
   "status": "passed"
 });
 formatter.match({
@@ -176,7 +176,7 @@ formatter.match({
   "location": "What_Can_I_Afford_Feature.user_enters_Zipcode(String)"
 });
 formatter.result({
-  "duration": 189505892,
+  "duration": 239554161,
   "status": "passed"
 });
 formatter.match({
@@ -189,18 +189,18 @@ formatter.match({
   "location": "What_Can_I_Afford_Feature.userEntersCashDownPayment(String)"
 });
 formatter.result({
-  "duration": 1624894671,
+  "duration": 77245375,
   "status": "passed"
 });
 formatter.match({
   "location": "What_Can_I_Afford_Feature.user_clicks_calculate_button()"
 });
 formatter.result({
-  "duration": 75585586,
+  "duration": 6018186244,
   "status": "passed"
 });
 formatter.after({
-  "duration": 80389154,
+  "duration": 86239920,
   "status": "passed"
 });
 });

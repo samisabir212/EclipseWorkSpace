@@ -12,7 +12,7 @@ Then user clicks calculate button
 
 
 	Examples: 
-	| monthly_payment | zipcode | cash_down_payment |
+	| monthly_payment | zipcode |
 	| 350 | 22042 | 5000 |
 	
 

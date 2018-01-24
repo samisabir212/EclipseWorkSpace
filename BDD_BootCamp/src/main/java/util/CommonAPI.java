@@ -115,7 +115,7 @@ public class CommonAPI {
 	public WebDriver gridEnv() throws MalformedURLException {
 		
 		// passing node url to remote driver
-		String nodeURL = getConfig_PropertiesFile().getProperty("nodeCloudURL");
+		String nodeURL = getConfig_PropertiesFile().getProperty("gridURL");
 
 		// WebDriver driver = null;
 
@@ -665,21 +665,20 @@ public class CommonAPI {
 
 		Set<String> allWindows = driver.getWindowHandles();
 
-		Iterator<String> allWindow = allWindows.iterator();
+		Iterator<String> Windows = allWindows.iterator();
 
-		String parentWindow = allWindow.next();
-
-		String childWindow = allWindow.next();
+		String childWindow = Windows.next();
 
 		driver.switchTo().window(childWindow);
 
 	}
 
-	public static void getAllWindowHandles() {
+	public static Set<String> getAllWindowHandles() {
 
 		Set<String> allWindows = driver.getWindowHandles();
 
 		System.out.println(allWindows);
+		return allWindows;
 
 	}
 

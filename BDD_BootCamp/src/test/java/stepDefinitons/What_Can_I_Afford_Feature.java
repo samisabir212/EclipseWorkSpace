@@ -123,6 +123,7 @@ public class What_Can_I_Afford_Feature extends CommonAPI {
 
 	public static void enterMonthlyPayment(String monthly_payment) {
 
+		clearInputField(By.xpath(getLocator_PropertiesFile("monthlypaymentfield"));
 		typeBy(By.xpath(getLocator_PropertiesFile("monthlypaymentfield")), monthly_payment);
 
 	}
@@ -135,6 +136,7 @@ public class What_Can_I_Afford_Feature extends CommonAPI {
 
 	public static void enterZipCode(String zipcode) {
 
+		clearInputField();
 		typeBy(By.xpath(getLocator_PropertiesFile("zipcode")), zipcode);
 	}
 
