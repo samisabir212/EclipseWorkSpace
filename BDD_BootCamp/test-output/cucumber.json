@@ -1,0 +1,155 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5427036126,
+              "status": "passed"
+            },
+            "match": {
+              "location": "What_Can_I_Afford_Feature.setUp()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "user should be able to calculate the ideal range for buying a car",
+        "description": "",
+        "id": "what-can-i-afford-calc;user-should-be-able-to-calculate-the-ideal-range-for-buying-a-car;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 80389154,
+              "status": "passed"
+            },
+            "match": {
+              "location": "What_Can_I_Afford_Feature.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 120711901,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user navigates to the Edmunds Calculator webapp page",
+            "match": {
+              "location": "What_Can_I_Afford_Feature.userNavigatesToCalcApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 102637020,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters \"350\" in the what can i afford field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "350",
+                  "offset": 13
+                }
+              ],
+              "location": "What_Can_I_Afford_Feature.userEntersMonthlyPayment(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 90154501,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks the Go button",
+            "match": {
+              "location": "What_Can_I_Afford_Feature.userClicksGo()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 900960106,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is navigated to the calculators affordability",
+            "match": {
+              "location": "What_Can_I_Afford_Feature.user_is_navigated_to_the_calculators_affordability()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 189505892,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters the \"22042\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "22042",
+                  "offset": 17
+                }
+              ],
+              "location": "What_Can_I_Afford_Feature.user_enters_Zipcode(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1624894671,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters \"5000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5000",
+                  "offset": 13
+                }
+              ],
+              "location": "What_Can_I_Afford_Feature.userEntersCashDownPayment(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 75585586,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks calculate button",
+            "match": {
+              "location": "What_Can_I_Afford_Feature.user_clicks_calculate_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "What can i afford Calc",
+    "description": "",
+    "id": "what-can-i-afford-calc",
+    "keyword": "Feature",
+    "uri": "/Users/sami/git/EclipseWorkSpace/BDD_BootCamp/src/main/java/features/What_Can_I_Afford.feature"
+  }
+]

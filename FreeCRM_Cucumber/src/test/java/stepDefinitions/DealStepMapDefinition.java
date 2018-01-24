@@ -20,6 +20,7 @@ public class DealStepMapDefinition extends Common_API {
 
 	//Data table with maps : for parameteriztion for test cases
 
+	
 	@Given("^user is already on Login Page$")
 	public void user_is_already_on_Login_Page() throws Throwable {
 

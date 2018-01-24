@@ -50,7 +50,7 @@ public class GetRequestDemo {
 	}
 	
 	
-	@Test
+	@Test(groups = "get")
 	public void getRequestBody() {
 		
 		Response res = 
