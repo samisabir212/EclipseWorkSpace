@@ -9,13 +9,13 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		
 		
-		features = "/Users/sami/git/EclipseWorkSpace/BDD_BootCamp/src/main/java/features/What_Can_I_Afford.feature",
+		features = "/Users/sami/git/EclipseWorkSpace/BDD_BootCamp/src/main/java/features",
 		glue = {"stepDefinitons"},
 		plugin = {"pretty","html:test-output/cucumber.html", "json:test-output/cucumber.json", "junit:junit_xml/cucmber.xml"},
 		monochrome = true,
 		strict = true,
-		dryRun = false
-		//tags = {}
+		dryRun = false,
+		tags = "@P2"
 		
 	
 		

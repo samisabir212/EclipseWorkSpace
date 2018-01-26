@@ -1,5 +1,6 @@
 Feature: What can i afford Calc
 
+@P2
 Scenario Outline: user should be able to calculate the ideal range for buying a car
 
 Given user navigates to the Edmunds Calculator webapp page
@@ -10,7 +11,7 @@ Then user enters the "<zipcode>"
 Then user enters "<cash_down_payment>"
 Then user clicks calculate button
 
-
+	
 	Examples: 
 	| monthly_payment | zipcode |
 	| 350 | 22042 | 5000 |
