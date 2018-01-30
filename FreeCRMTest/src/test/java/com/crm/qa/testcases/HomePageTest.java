@@ -21,7 +21,16 @@ import com.crm.qa.util.TestUtil;
 
 
 public class HomePageTest extends TestBase {
-	
+
+
+	public HomePageTest() throws IOException {
+		super();
+	}
+
+
+
+
+
 	HomePage homePage;
 	LoginPage loginPage;
 	TestUtil testUtil;
@@ -29,10 +38,7 @@ public class HomePageTest extends TestBase {
 	
 	
 	
-	public HomePageTest() throws IOException {
-		super();
-		
-	}
+
 	
 	//test cases should be seperte -- testcases should be independent of each other
 	//before each testcase launch the browser and log in
