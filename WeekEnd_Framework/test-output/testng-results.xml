@@ -2,24 +2,71 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="The Great Courses suits" duration-ms="40511" started-at="2018-01-05T16:59:10Z" finished-at="2018-01-05T16:59:51Z">
+  <suite name="The Great Courses suits" duration-ms="5071" started-at="2018-02-09T20:29:19Z" finished-at="2018-02-09T20:29:24Z">
     <groups>
     </groups>
-    <test name="test" duration-ms="40511" started-at="2018-01-05T16:59:10Z" finished-at="2018-01-05T16:59:51Z">
-      <class name="tests_TheGreatCourses.Test1">
-        <test-method status="PASS" signature="Initialize()[pri:0, instance:tests_TheGreatCourses.Test1@1e127982]" name="Initialize" is-config="true" duration-ms="9941" started-at="2018-01-05T11:59:10Z" finished-at="2018-01-05T11:59:20Z">
+    <test name="reg12123" duration-ms="5071" started-at="2018-02-09T20:29:19Z" finished-at="2018-02-09T20:29:24Z">
+      <class name="tests_TheGreatCourses.Testing_Generic_baseClass">
+        <test-method status="PASS" signature="setUp(boolean, java.lang.String, boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests_TheGreatCourses.Testing_Generic_baseClass@59ec2012]" name="setUp" is-config="true" duration-ms="4970" started-at="2018-02-09T15:29:19Z" finished-at="2018-02-09T15:29:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[saucelabs]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[mac]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Mac]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sierra]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[54.0]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[https://www.thegreatcourses.com/]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Initialize -->
-        <test-method status="PASS" signature="test_ProductPurchase_Item_Zero_to_infinity()[pri:0, instance:tests_TheGreatCourses.Test1@1e127982]" name="test_ProductPurchase_Item_Zero_to_infinity" duration-ms="30465" started-at="2018-01-05T11:59:20Z" finished-at="2018-01-05T11:59:51Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test()[pri:0, instance:tests_TheGreatCourses.Testing_Generic_baseClass@59ec2012]" name="test" duration-ms="12" started-at="2018-02-09T15:29:24Z" finished-at="2018-02-09T15:29:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_ProductPurchase_Item_Zero_to_infinity -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests_TheGreatCourses.Test1@1e127982]" name="tearDown" is-config="true" duration-ms="87" started-at="2018-01-05T11:59:51Z" finished-at="2018-01-05T11:59:51Z">
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests_TheGreatCourses.Testing_Generic_baseClass@59ec2012]" name="cleanUp" is-config="true" duration-ms="75" started-at="2018-02-09T15:29:24Z" finished-at="2018-02-09T15:29:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests_TheGreatCourses.Test1 -->
-    </test> <!-- test -->
+        </test-method> <!-- cleanUp -->
+      </class> <!-- tests_TheGreatCourses.Testing_Generic_baseClass -->
+    </test> <!-- reg12123 -->
   </suite> <!-- The Great Courses suits -->
 </testng-results>

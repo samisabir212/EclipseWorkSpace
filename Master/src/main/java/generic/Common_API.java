@@ -671,12 +671,17 @@ public class Common_API {
 
 		Iterator<String> allWindow = allWindows.iterator();
 
-		String parentWindow = allWindow.next();
+		//String parentWindow = allWindow.next();
 
 		String childWindow = allWindow.next();
 
 		driver.switchTo().window(childWindow);
 
+	}
+	
+	public static void switchWindows(int getTab) {
+		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+	    driver.switchTo().window(tabs.get(getTab));
 	}
 
 	public static void getAllWindowHandles() {
