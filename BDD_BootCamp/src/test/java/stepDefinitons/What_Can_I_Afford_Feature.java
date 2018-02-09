@@ -10,12 +10,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import Utilities.CommonAPI;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import util.CommonAPI;
 
 public class What_Can_I_Afford_Feature extends CommonAPI {
 

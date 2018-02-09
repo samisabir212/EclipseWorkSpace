@@ -1,4 +1,4 @@
-package util;
+package Utilities;
 
 import java.awt.Toolkit;
 import java.io.File;
@@ -88,7 +88,7 @@ public class CommonAPI {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			if (os.equalsIgnoreCase("Mac")) {
 				System.setProperty("webdriver.chrome.driver",
-						"/Users/sami/Desktop/RocketLauncher/Mac/Drivers/chromedriver2_26");
+						"/Users/sami/Desktop/RocketLauncher/Mac/Drivers/chromedriver2_25");
 			} else if (os.equalsIgnoreCase("Win")) {
 				System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver.exe");
 			}

@@ -1,6 +1,6 @@
 Feature: What can i afford Calc
 
-@P2
+@Smoke
 Scenario Outline: user should be able to calculate the ideal range for buying a car
 
 Given user navigates to the Edmunds Calculator webapp page

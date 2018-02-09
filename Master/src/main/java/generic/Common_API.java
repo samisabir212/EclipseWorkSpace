@@ -59,7 +59,7 @@ public class Common_API {
 
 	@Parameters({ "useCloudEnv", "cloudEnvName", "useGrid", "platform", "os", "os_version", "browserName",
 			"browserVersion", "url" })
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,
 			@Optional("false") boolean useGrid, @Optional("Mac") String platform, @Optional("Windows") String os,
 			@Optional("Sierra") String os_version, @Optional("chrome") String browserName,
@@ -135,7 +135,7 @@ public class Common_API {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			if (os.equalsIgnoreCase("Mac")) {
 				System.setProperty("webdriver.chrome.driver",
-						"/Users/sami/Desktop/RocketLauncher/Mac/Drivers/chromedriver2_25");
+						"/Users/sami/Desktop/RocketLauncher/Mac/Drivers/chromedriver2_26");
 			} else if (os.equalsIgnoreCase("Win")) {
 				System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver.exe");
 			}
@@ -199,7 +199,7 @@ public class Common_API {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void cleanUp() {
 		System.out.println("quit");
 		driver.quit();

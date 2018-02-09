@@ -1,7 +1,7 @@
 Feature: Free CRM Login Feature 
 
 #with Examples Keyword
-Scenario Outline: Free CRM Login test scenario 
+Scenario Outline: i enter my information in the contacts page.
 
 	Given user is already on the login page 
 	When title of login page is Free CRM 
