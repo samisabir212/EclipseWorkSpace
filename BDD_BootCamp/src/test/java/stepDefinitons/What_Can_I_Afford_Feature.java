@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import Utilities.CommonAPI;
+import base.CommonAPI;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -41,7 +41,7 @@ public class What_Can_I_Afford_Feature extends CommonAPI {
 		String title = driver.getTitle();
 		System.out.println(title);
 		Assert.assertEquals(title, "Auto Calculators", "Expected title does not match actual title");
-
+		log.info("verified title");
 	}
 
 	@Then("^user enters \"([^\"]*)\" in the what can i afford field$")

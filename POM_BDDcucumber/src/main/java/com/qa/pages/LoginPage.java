@@ -10,40 +10,7 @@ import com.qa.testBase.TestBase;
 
 public class LoginPage extends TestBase {
 
-	// ~~~~~~~~PAGE ELEMENTS~~~~~~~
-	// username
-	@FindBy(name = "username")
-	WebElement username;
-	// password
-	@FindBy(name = "password")
-	WebElement password;
-	// Login button
-	@FindBy(xpath = "//input[@type='submit']")
-	WebElement loginButton;
-	// 'FreeCRM' logo
-	@FindBy(xpath = "//a[@class='navbar-brand']/img")
-	WebElement freeCRM_Logo;
-	// features link
-	@FindBy(xpath = "//a[contains(text(),'Features')]")
-	WebElement features_Link;
-	// Sign Up link
-	@FindBy(xpath = "//a[contains(text(),'Sign Up')]")
-	WebElement signUp_Link;
-	// Pricing link
-	@FindBy(xpath = "//a[contains(text(),'Pricing')]")
-	WebElement pricing_Link;
-	// Customers Link
-	@FindBy(xpath = "//a[contains(text(),'Customers')]")
-	WebElement customers_link;
-	// Contact Link
-	@FindBy(xpath = "//a[contains(text(),'Contact')]")
-	WebElement contact_Link;
-	// 'Forgot Password?' text
-	@FindBy(xpath = "//a[contains(text(),'Forgot Password?')]")
-	WebElement forgotPassword_txt;
-	// Sign Up button link below 'Free CRM' logo on top left side of page
-	@FindBy(xpath = "//button[@class='btn' or contains(text(),'Sign Up')]")
-	WebElement signUp_ButtonLink;
+	
 
 	//~PageFactory~ initialize the page Objects
 	public LoginPage() throws IOException {
@@ -76,5 +43,42 @@ public class LoginPage extends TestBase {
 		return new HomePage();
 
 	}
+	
+	
+	
+	// ~~~~~~~~PAGE ELEMENTS~~~~~~~
+		// username
+		@FindBy(name = "username")
+		WebElement username;
+		// password
+		@FindBy(name = "password")
+		WebElement password;
+		// Login button
+		@FindBy(xpath = "//input[@type='submit']")
+		WebElement loginButton;
+		// 'FreeCRM' logo
+		@FindBy(xpath = "//a[@class='navbar-brand']/img")
+		WebElement freeCRM_Logo;
+		// features link
+		@FindBy(xpath = "//a[contains(text(),'Features')]")
+		WebElement features_Link;
+		// Sign Up link
+		@FindBy(xpath = "//a[contains(text(),'Sign Up')]")
+		WebElement signUp_Link;
+		// Pricing link
+		@FindBy(xpath = "//a[contains(text(),'Pricing')]")
+		WebElement pricing_Link;
+		// Customers Link
+		@FindBy(xpath = "//a[contains(text(),'Customers')]")
+		WebElement customers_link;
+		// Contact Link
+		@FindBy(xpath = "//a[contains(text(),'Contact')]")
+		WebElement contact_Link;
+		// 'Forgot Password?' text
+		@FindBy(xpath = "//a[contains(text(),'Forgot Password?')]")
+		WebElement forgotPassword_txt;
+		// Sign Up button link below 'Free CRM' logo on top left side of page
+		@FindBy(xpath = "//button[@class='btn' or contains(text(),'Sign Up')]")
+		WebElement signUp_ButtonLink;
 
 }

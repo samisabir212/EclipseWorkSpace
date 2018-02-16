@@ -39,6 +39,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
 
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
@@ -51,6 +52,8 @@ public class Common_API {
 	public static WebEventListener eventListener;
 	public static Properties prop;
 	public static Logger log = Logger.getLogger(Common_API.class);
+	public static SoftAssert sAssert = new SoftAssert();
+	
 
 	private String saucelabs_username = "";
 	private String browserstack_username = "";
@@ -318,8 +321,8 @@ public class Common_API {
 	}
 
 	// ?????
-	public static void takeEnterKeys(String locator) {
-		driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
+	public static void keyboardKeys(String locator,Keys keys) {
+		driver.findElement(By.cssSelector(locator)).sendKeys(keys);
 	}
 
 	/***************************
@@ -354,26 +357,26 @@ public class Common_API {
 
 	// pass the locator and pass the type of locator and it will automatically
 	// generate
-	public WebElement getElement(String locator, String type) {
+	public static WebElement findElement(String locator, String type) {
 
 		type = type.toLowerCase();
 
 		if (type.equals("id")) {
 			System.out.println("Element found with id: " + locator);// you can change it and make it print ID by
 																	// changing locator to type
-			return this.driver.findElement(By.id(locator));
+			return driver.findElement(By.id(locator));
 		} else if (type.equals("xpath")) {
 			System.out.println("Element found with xpath: " + locator);
-			return this.driver.findElement(By.xpath(locator));
+			return driver.findElement(By.xpath(locator));
 		} else if (type.equals("css")) {
 			System.out.println("Element found with xpath: " + locator);
-			return this.driver.findElement(By.cssSelector(type));
+			return driver.findElement(By.cssSelector(type));
 		} else if (type.equals("linktext")) {
 			System.out.println("Element found with xpath: " + locator);
-			return this.driver.findElement(By.linkText(locator));
+			return driver.findElement(By.linkText(locator));
 		} else if (type.equals("partiallinktext")) {
 			System.out.println("Element found with xpath: " + locator);
-			return this.driver.findElement(By.partialLinkText(type));
+			return driver.findElement(By.partialLinkText(type));
 		} else {
 			System.out.println("Locator type not supported");
 			return null;
@@ -381,16 +384,16 @@ public class Common_API {
 	}
 
 	// get Links
-	public static void getLinks(String locator) {
-		driver.findElement(By.linkText(locator)).findElement(By.tagName("a")).getText();
+	public static String getLinkText(String locator) {
+		 return driver.findElement(By.linkText(locator)).findElement(By.tagName("a")).getText();
 	}
 
 	public static List<String> getTextFromWebElements(String locator) {
 
-		List<WebElement> element = new ArrayList<WebElement>();
-		List<String> text = new ArrayList<String>();
-		element = driver.findElements(By.cssSelector(locator));
-		for (WebElement web : element) {
+		List<WebElement> elements = new ArrayList<WebElement>();
+		List<String> text = new ArrayList<String>(); //element text list repo
+		elements = driver.findElements(By.xpath(locator));
+		for (WebElement web : elements) {
 			text.add(web.getText());
 		}
 
@@ -415,17 +418,17 @@ public class Common_API {
 
 	}
 
-	public static void verifyTextFieldisDisplayed(String locator) {
+	public static void verifyElementisDisplayed(String locator) {
 
 		WebElement textField = driver.findElement(By.id(locator));
 		boolean textFieldObject = textField.isDisplayed();
 
 		if (textFieldObject = true) {
-			System.out.println("(Pass) text field is present");
+			System.out.println("(Pass) text field is present "+ textFieldObject);
 
 		} else {
 
-			System.out.println("(Fail) Text field is not present");
+			System.out.println("(Fail) Text field is not present "+ textFieldObject);
 
 		}
 	}
@@ -468,15 +471,6 @@ public class Common_API {
 
 	}
 
-	public static void verifyDisplayedElement(boolean element) {
-
-		if (element == true) {
-			System.out.println("element is displayed:: pass");
-		} else {
-			System.out.println("element is not displayed:: fail");
-		}
-
-	}
 
 	public static String getCurrentPageUrl() {
 
@@ -504,16 +498,20 @@ public class Common_API {
 
 		List<String> text = new ArrayList<String>();
 		for (int i = 1; i < options.size(); i++) {
+			
 			text.add(options.get(i).getText());
 		}
+		
 
 	}
 
 	// get list of dropdown option2
 	public static List<String> getAllOptions(By by) {
+		
 		List<String> options = new ArrayList<String>();
 		for (WebElement option : new Select(driver.findElement(by)).getOptions()) {
 			String txt = option.getText();
+			System.out.println("option text = " + txt);
 			if (option.getAttribute("value") != "")
 				options.add(option.getText());
 		}
@@ -652,17 +650,13 @@ public class Common_API {
 
 	}
 
+	//switch back to default content
 	public static void goBackToHomeWindow() {
 
 		driver.switchTo().defaultContent();
 	}
 
-	// Working with Window Handles
-	public static void getWindowHandle() {
-		// returns parent window handle
-		String primeWindow = driver.getWindowHandle();
-
-	}
+	
 
 	// switching from parent window to child window
 	public static void switchParentToChildWindow() {
@@ -723,7 +717,7 @@ public class Common_API {
 	public static void implicitWait(int impWait, int pageLoadT) {
 
 		driver.manage().timeouts().implicitlyWait(impWait, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(35, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(pageLoadT, TimeUnit.SECONDS);
 
 	}
 
@@ -731,7 +725,6 @@ public class Common_API {
 	public static void waitUntilVisible(By locator) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
 	}
@@ -790,6 +783,7 @@ public class Common_API {
 		action.moveToElement(toElement1).perform();
 		sleepFor(2);
 		action.release(toElement1).perform();
+		
 
 	}
 
