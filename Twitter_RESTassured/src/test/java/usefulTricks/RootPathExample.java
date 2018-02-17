@@ -46,7 +46,7 @@ public class RootPathExample {
 			.log().body()
 			.rootPath("user") //<-- telling rest assured that rooth path starts at user so now in the body i dont have to type user.name, user.screen_name etc.
 			.body("name", hasItem("sami sabir")) //<-- hamcrest assertion
-			.body("screen_name", hasItem("samisabir2"))
+			.body("screen_name", hasItem("samisabir22"))
 			.rootPath("entities.hashtags[0]") //<--telling rest that here is my new root path which starts at entities.hashtag[0]
 			.body("text", hasItem("practice"),  
 				  "size()", equalTo(1),  //<-- notice putting assertions all in one body

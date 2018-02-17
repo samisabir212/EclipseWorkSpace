@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="usefulTricks.RootPathExample">
+      <class name="specs.ResponseSpecificationDEMO">
         <methods>
-          <include name="readingTweets"/>
+          <include name="gettingReponse_Using_ResponseBuilder_restassured"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- usefulTricks.RootPathExample -->
+      </class> <!-- specs.ResponseSpecificationDEMO -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
