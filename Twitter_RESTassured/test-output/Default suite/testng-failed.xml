@@ -3,14 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="samples.POST_GET_DELETE_WORKFLOW">
+      <class name="samples.Extract_XML_Reponse">
         <methods>
-          <include name="readTweet_Using_Get_Request"/>
-          <include name="deleteTweet"/>
-          <include name="postTWEET"/>
-          <include name="setUp"/>
+          <include name="extractResponse"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- samples.POST_GET_DELETE_WORKFLOW -->
+      </class> <!-- samples.Extract_XML_Reponse -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

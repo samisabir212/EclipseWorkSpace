@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2918" started-at="2018-02-17T01:27:23Z" finished-at="2018-02-17T01:27:26Z">
+  <suite name="Default suite" duration-ms="3920" started-at="2018-02-17T02:16:40Z" finished-at="2018-02-17T02:16:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2918" started-at="2018-02-17T01:27:23Z" finished-at="2018-02-17T01:27:26Z">
-      <class name="samples.POST_GET_DELETE_WORKFLOW">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:samples.POST_GET_DELETE_WORKFLOW@610694f1]" name="setUp" is-config="true" duration-ms="357" started-at="2018-02-16T20:27:23Z" finished-at="2018-02-16T20:27:24Z">
+    <test name="Default test" duration-ms="3920" started-at="2018-02-17T02:16:40Z" finished-at="2018-02-17T02:16:44Z">
+      <class name="samples.Extract_XML_Response_Part2">
+        <test-method status="PASS" signature="setup()[pri:0, instance:samples.Extract_XML_Response_Part2@610694f1]" name="setup" is-config="true" duration-ms="448" started-at="2018-02-16T21:16:40Z" finished-at="2018-02-16T21:16:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="postTWEET()[pri:0, instance:samples.POST_GET_DELETE_WORKFLOW@610694f1]" name="postTWEET" duration-ms="2010" started-at="2018-02-16T20:27:24Z" finished-at="2018-02-16T20:27:26Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="extractResponse()[pri:0, instance:samples.Extract_XML_Response_Part2@610694f1]" name="extractResponse" duration-ms="3453" started-at="2018-02-16T21:16:40Z" finished-at="2018-02-16T21:16:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postTWEET -->
-        <test-method status="PASS" signature="readTweet_Using_Get_Request()[pri:0, instance:samples.POST_GET_DELETE_WORKFLOW@610694f1]" name="readTweet_Using_Get_Request" duration-ms="281" started-at="2018-02-16T20:27:26Z" depends-on-methods="samples.POST_GET_DELETE_WORKFLOW.postTWEET" finished-at="2018-02-16T20:27:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- readTweet_Using_Get_Request -->
-        <test-method status="PASS" signature="deleteTweet()[pri:0, instance:samples.POST_GET_DELETE_WORKFLOW@610694f1]" name="deleteTweet" duration-ms="251" started-at="2018-02-16T20:27:26Z" depends-on-methods="samples.POST_GET_DELETE_WORKFLOW.readTweet_Using_Get_Request" finished-at="2018-02-16T20:27:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteTweet -->
-      </class> <!-- samples.POST_GET_DELETE_WORKFLOW -->
+        </test-method> <!-- extractResponse -->
+      </class> <!-- samples.Extract_XML_Response_Part2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
